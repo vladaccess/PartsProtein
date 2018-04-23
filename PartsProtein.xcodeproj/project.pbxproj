@@ -10,6 +10,7 @@
 		82E0E2728CEDA5BFFDF9B541 /* Pods_PartsProtein.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFDE474377E6C468AE8CED6 /* Pods_PartsProtein.framework */; };
 		E90F0F36208BB41000E6A738 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90F0F35208BB41000E6A738 /* Extensions.swift */; };
 		E926C7D8208CC2E4000F7808 /* PartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E926C7D7208CC2E4000F7808 /* PartsViewController.swift */; };
+		E93BA51A208E87B6000374E2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93BA519208E87B6000374E2 /* NotificationViewController.swift */; };
 		E9480F2C208B8366006752AF /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9480F2B208B8366006752AF /* MeasureViewController.swift */; };
 		E973F360208A890C00D5C414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973F35F208A890C00D5C414 /* AppDelegate.swift */; };
 		E973F362208A890C00D5C414 /* OverboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973F361208A890C00D5C414 /* OverboardViewController.swift */; };
@@ -30,6 +31,7 @@
 		C73DEC36FE77FE0290DEECED /* Pods-PartsProtein.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsProtein.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartsProtein/Pods-PartsProtein.debug.xcconfig"; sourceTree = "<group>"; };
 		E90F0F35208BB41000E6A738 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E926C7D7208CC2E4000F7808 /* PartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsViewController.swift; sourceTree = "<group>"; };
+		E93BA519208E87B6000374E2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		E9480F2B208B8366006752AF /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
 		E973F35C208A890C00D5C414 /* PartsProtein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartsProtein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E973F35F208A890C00D5C414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				E926C7D7208CC2E4000F7808 /* PartsViewController.swift */,
 				E9B1929A208BCD7D00C2A5CC /* WeightViewController.swift */,
 				E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */,
+				E93BA519208E87B6000374E2 /* NotificationViewController.swift */,
 			);
 			path = Overboard;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			files = (
 				E973F362208A890C00D5C414 /* OverboardViewController.swift in Sources */,
 				E90F0F36208BB41000E6A738 /* Extensions.swift in Sources */,
+				E93BA51A208E87B6000374E2 /* NotificationViewController.swift in Sources */,
 				E973F372208A891F00D5C414 /* Colors.swift in Sources */,
 				E926C7D8208CC2E4000F7808 /* PartsViewController.swift in Sources */,
 				E973F360208A890C00D5C414 /* AppDelegate.swift in Sources */,
