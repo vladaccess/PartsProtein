@@ -647,6 +647,9 @@ what measurement system do you prefer?</string>
                                             <constraint firstAttribute="width" constant="60" id="YUf-eM-VZ2"/>
                                         </constraints>
                                         <state key="normal" image="blue-check-icon"/>
+                                        <connections>
+                                            <action selector="done:" destination="J9z-Ha-RzA" eventType="touchUpInside" id="dQC-NF-lvb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

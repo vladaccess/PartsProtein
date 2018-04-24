@@ -86,6 +86,11 @@ class NotificationViewController: OverboardViewController {
         userDefaults.synchronize()
     }
     
+    @IBAction func done(_ sender:UIButton) {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            appDelegate.loadMainInterface()
+        }
+    }
     
 
 

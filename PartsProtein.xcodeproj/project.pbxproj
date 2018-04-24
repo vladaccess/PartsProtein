@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		82E0E2728CEDA5BFFDF9B541 /* Pods_PartsProtein.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFDE474377E6C468AE8CED6 /* Pods_PartsProtein.framework */; };
 		E90F0F36208BB41000E6A738 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90F0F35208BB41000E6A738 /* Extensions.swift */; };
+		E9113544208FE6990015CCE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9113543208FE6990015CCE3 /* Main.storyboard */; };
+		E9113546208FE89C0015CCE3 /* EatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9113545208FE89C0015CCE3 /* EatViewController.swift */; };
 		E926C7D8208CC2E4000F7808 /* PartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E926C7D7208CC2E4000F7808 /* PartsViewController.swift */; };
 		E93BA51A208E87B6000374E2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93BA519208E87B6000374E2 /* NotificationViewController.swift */; };
 		E9480F2C208B8366006752AF /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9480F2B208B8366006752AF /* MeasureViewController.swift */; };
@@ -30,6 +32,8 @@
 		BE3C2A3B4FD4492FCB3DE57A /* Pods-PartsProtein.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsProtein.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartsProtein/Pods-PartsProtein.release.xcconfig"; sourceTree = "<group>"; };
 		C73DEC36FE77FE0290DEECED /* Pods-PartsProtein.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsProtein.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartsProtein/Pods-PartsProtein.debug.xcconfig"; sourceTree = "<group>"; };
 		E90F0F35208BB41000E6A738 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E9113543208FE6990015CCE3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E9113545208FE89C0015CCE3 /* EatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatViewController.swift; sourceTree = "<group>"; };
 		E926C7D7208CC2E4000F7808 /* PartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsViewController.swift; sourceTree = "<group>"; };
 		E93BA519208E87B6000374E2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		E9480F2B208B8366006752AF /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 		E926C7D5208CBDDD000F7808 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E9113545208FE89C0015CCE3 /* EatViewController.swift */,
 				E926C7D6208CBE04000F7808 /* Overboard */,
 			);
 			path = Controllers;
@@ -125,6 +130,7 @@
 				E973F373208A899F00D5C414 /* Support */,
 				E926C7D5208CBDDD000F7808 /* Controllers */,
 				E973F363208A890C00D5C414 /* Overboard.storyboard */,
+				E9113543208FE6990015CCE3 /* Main.storyboard */,
 				E9EC7EDF208B675A00B99254 /* Resources */,
 				E973F366208A890C00D5C414 /* Assets.xcassets */,
 				E973F368208A890C00D5C414 /* LaunchScreen.storyboard */,
@@ -224,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EC7EDE208B674700B99254 /* KaushanScript-Regular.ttf in Resources */,
+				E9113544208FE6990015CCE3 /* Main.storyboard in Resources */,
 				E973F36A208A890C00D5C414 /* LaunchScreen.storyboard in Resources */,
 				E973F367208A890C00D5C414 /* Assets.xcassets in Resources */,
 				E973F365208A890C00D5C414 /* Overboard.storyboard in Resources */,
@@ -303,6 +310,7 @@
 				E973F360208A890C00D5C414 /* AppDelegate.swift in Sources */,
 				E9B1929B208BCD7D00C2A5CC /* WeightViewController.swift in Sources */,
 				E982C7EB208BC10700763AA1 /* Settings.swift in Sources */,
+				E9113546208FE89C0015CCE3 /* EatViewController.swift in Sources */,
 				E9480F2C208B8366006752AF /* MeasureViewController.swift in Sources */,
 				E99BE1AD208D1CCC009050C7 /* GoalViewController.swift in Sources */,
 				E99E09CD208B3095003A74CF /* Constants.swift in Sources */,
