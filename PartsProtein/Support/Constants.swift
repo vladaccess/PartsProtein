@@ -39,4 +39,16 @@ public enum Constants {
             }
         }
     }
+    
+    public enum Notification:Int {
+        case on,from,to,interval
+        func key() -> String {
+            switch self {
+            case .from: return "NOTIFICATION_FROM"
+            case .to: return "NOTIFICATION_TO"
+            case .interval: return "NOTIFICATION_INTERVAL"
+            case .on: return "NOTIFICATION_ON"
+            }
+        }
+    }
 }

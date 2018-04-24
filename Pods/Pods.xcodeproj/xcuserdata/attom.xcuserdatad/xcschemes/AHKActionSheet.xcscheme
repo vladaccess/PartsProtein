@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '84133AACC9CCBC75D7F78C989925B992'
-               BlueprintName = 'pop'
+               BlueprintIdentifier = '7621630BF9979CD340446B0404B671CD'
+               BlueprintName = 'AHKActionSheet'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'pop.framework'>
+               BuildableName = 'AHKActionSheet.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
