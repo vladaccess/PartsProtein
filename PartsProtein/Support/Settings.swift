@@ -11,8 +11,8 @@ import Foundation
 class Settings {
     class func registerDefaultsForGramm() {
         let userDefaults = UserDefaults.groupUserDefaults()
-        userDefaults.set(20, forKey: Constants.Part.small.key())
-        userDefaults.set(40, forKey: Constants.Part.big.key())
+        userDefaults.set(10, forKey: Constants.Part.small.key())
+        userDefaults.set(30, forKey: Constants.Part.big.key())
     }
 }
 

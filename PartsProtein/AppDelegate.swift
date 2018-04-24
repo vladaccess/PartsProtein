@@ -17,7 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setupAppearance()
         let userDefaults = UserDefaults.groupUserDefaults()
-        overBoardingShow()
+        if !userDefaults.bool(forKey: Constants.General.overboardingShown.key()) {
+            overBoardingShow()
+        }else {
+            loadMainStoryboard()
+        }
+        
         return true
     }
     
@@ -33,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = controller
     }
     
-    func loadMainInterface() {
+    func loadMainStoryboard() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let controller = storyboard.instantiateInitialViewController() else { return }
         self.window?.rootViewController = controller
