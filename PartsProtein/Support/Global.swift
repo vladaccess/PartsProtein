@@ -28,6 +28,17 @@ class Global {
     }
     
     class func actionSheetAppearance() {
+        AHKActionSheet.appearance().blurTintColor = Tint.mainTint
+        AHKActionSheet.appearance().separatorColor = UIColor(white: 1.0, alpha: 0.3)
+        if let font = UIFont(name: "Avenir-Book", size: 16) {
+            AHKActionSheet.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white,NSAttributedStringKey.font:font]
+            AHKActionSheet.appearance().buttonTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white,NSAttributedStringKey.font:font]
+            AHKActionSheet.appearance().cancelButtonTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white,NSAttributedStringKey.font:font]
+        }
         
+        if #available(iOS 11, *) {
+            let bottomInsets = UIApplication.shared.delegate?.window??.safeAreaInsets.bottom ?? 0.0
+            AHKActionSheet.appearance().cancelButtonHeight = 44 + bottomInsets
+        }
     }
 }

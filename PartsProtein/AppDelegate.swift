@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupAppearance() {
+        Global.actionSheetAppearance()
         UIApplication.shared.statusBarStyle = .lightContent
         self.window?.backgroundColor = .white
     }
