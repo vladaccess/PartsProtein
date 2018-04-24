@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AHKActionSheet
 
 class Global {
     class func numericToolBar(_ target:AnyObject?,selector:Selector,barColor:UIColor = .white,tintColor:UIColor = Tint.mainTint) -> UIToolbar {
@@ -24,5 +25,9 @@ class Global {
         numberToolBar.isTranslucent = true
         numberToolBar.items = [space,button]
         return numberToolBar
+    }
+    
+    class func actionSheetAppearance() {
+        
     }
 }

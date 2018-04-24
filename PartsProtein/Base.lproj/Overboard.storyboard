@@ -666,12 +666,15 @@ what measurement system do you prefer?</string>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4b0-FU-cKC">
-                                        <rect key="frame" x="306" y="10" width="51" height="31"/>
-                                    </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP7-Ln-bSC">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4b0-FU-cKC">
+                                        <rect key="frame" x="306" y="10" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="onNotification:" destination="J9z-Ha-RzA" eventType="valueChanged" id="7qJ-Mj-mVi"/>
+                                        </connections>
+                                    </switch>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3yW-Gn-HSs"/>
@@ -702,6 +705,9 @@ what measurement system do you prefer?</string>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRx-su-9be">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <connections>
+                                            <action selector="fromSelection:" destination="J9z-Ha-RzA" eventType="touchUpInside" id="LAr-pV-KGH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -733,6 +739,9 @@ what measurement system do you prefer?</string>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLA-qH-9JT">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <connections>
+                                            <action selector="toSelection:" destination="J9z-Ha-RzA" eventType="touchUpInside" id="m29-ge-mFY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -764,6 +773,9 @@ what measurement system do you prefer?</string>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SV-j5-AfS">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <connections>
+                                            <action selector="intervalSelection:" destination="J9z-Ha-RzA" eventType="touchUpInside" id="4L9-TB-yXQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -803,6 +815,10 @@ what measurement system do you prefer?</string>
                         <viewLayoutGuide key="safeArea" id="pMq-dp-sBQ"/>
                     </view>
                     <connections>
+                        <outlet property="fromLabel" destination="LRJ-U4-YLx" id="Hof-xm-MJq"/>
+                        <outlet property="intervalLabel" destination="fv9-19-1iX" id="MQS-1i-mhX"/>
+                        <outlet property="notificationSwitch" destination="4b0-FU-cKC" id="dWf-Nt-kaV"/>
+                        <outlet property="toLabel" destination="vWH-Da-cA8" id="k5c-Po-cry"/>
                         <outletCollection property="viewArray" destination="SLu-ho-x8G" collectionClass="NSMutableArray" id="5Hg-pK-usk"/>
                         <outletCollection property="viewArray" destination="Tz5-se-BDj" collectionClass="NSMutableArray" id="QSE-R3-Hfs"/>
                         <outletCollection property="viewArray" destination="gn0-eB-Vmb" collectionClass="NSMutableArray" id="N7T-UO-WCE"/>
