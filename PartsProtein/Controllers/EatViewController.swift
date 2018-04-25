@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreMotion
+import UICountingLabel
+import BAFluidView
 
 
 class EatViewController: UIViewController {
@@ -19,10 +21,21 @@ class EatViewController: UIViewController {
     @IBOutlet weak var minusButton:UIButton!
     @IBOutlet weak var containerView:UIView!
     @IBOutlet weak var maskImage:UIImageView!
+    @IBOutlet weak var percentageLabel:UICountingLabel!
+    
+    var userDefaults = UserDefaults.groupUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Eat!"
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return false
     }
 
 }

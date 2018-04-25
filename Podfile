@@ -8,4 +8,7 @@ target 'PartsProtein' do
   pod 'AMWaveTransition'
   pod 'pop'
   pod 'AHKActionSheet'
+  pod 'UICountingLabel'
+  pod 'BAFluidView'
+  pod 'RealmSwift'
 end

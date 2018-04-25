@@ -70,7 +70,7 @@
                                     <constraint firstAttribute="width" constant="70" id="jDW-cP-HIy"/>
                                 </constraints>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-x7-Agk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-x7-Agk" customClass="UICountingLabel">
                                 <rect key="frame" x="16" y="389" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="K4t-ja-8IO"/>
@@ -122,6 +122,7 @@
                         <outlet property="largeButton" destination="OYf-Zq-FdK" id="evU-ud-n8u"/>
                         <outlet property="maskImage" destination="ajh-2I-F0o" id="2OS-gw-coF"/>
                         <outlet property="minusButton" destination="RIX-fq-JZf" id="2Nx-iv-Psx"/>
+                        <outlet property="percentageLabel" destination="I3V-x7-Agk" id="Lu3-cq-fyy"/>
                         <outlet property="smallButton" destination="u7x-Ku-Ffa" id="TOc-JU-KXO"/>
                         <outlet property="starButton" destination="p2g-WE-vii" id="3vV-tN-qsi"/>
                     </connections>

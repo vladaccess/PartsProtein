@@ -21,6 +21,8 @@
 		E973F36A208A890C00D5C414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E973F368208A890C00D5C414 /* LaunchScreen.storyboard */; };
 		E973F372208A891F00D5C414 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973F371208A891F00D5C414 /* Colors.swift */; };
 		E982C7EB208BC10700763AA1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E982C7EA208BC10700763AA1 /* Settings.swift */; };
+		E988A43D2091219C007CB2C6 /* UINavigationController-StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */; };
+		E988A43F209123BF007CB2C6 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A43E209123BF007CB2C6 /* Part.swift */; };
 		E99BE1AD208D1CCC009050C7 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */; };
 		E99E09CD208B3095003A74CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E09CC208B3095003A74CF /* Constants.swift */; };
 		E9B1929B208BCD7D00C2A5CC /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B1929A208BCD7D00C2A5CC /* WeightViewController.swift */; };
@@ -46,6 +48,8 @@
 		E973F36B208A890C00D5C414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E973F371208A891F00D5C414 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		E982C7EA208BC10700763AA1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController-StatusBar.swift"; sourceTree = "<group>"; };
+		E988A43E209123BF007CB2C6 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		E99E09CC208B3095003A74CF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9B1929A208BCD7D00C2A5CC /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				E973F35F208A890C00D5C414 /* AppDelegate.swift */,
+				E988A440209123D4007CB2C6 /* Model */,
 				E973F373208A899F00D5C414 /* Support */,
 				E926C7D5208CBDDD000F7808 /* Controllers */,
 				E973F363208A890C00D5C414 /* Overboard.storyboard */,
@@ -147,8 +152,17 @@
 				E90F0F35208BB41000E6A738 /* Extensions.swift */,
 				E982C7EA208BC10700763AA1 /* Settings.swift */,
 				E9B1929C208BF07B00C2A5CC /* Global.swift */,
+				E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		E988A440209123D4007CB2C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E988A43E209123BF007CB2C6 /* Part.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E9EC7EDF208B675A00B99254 /* Resources */ = {
@@ -267,12 +281,20 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PartsProtein/Pods-PartsProtein-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AHKActionSheet/AHKActionSheet.framework",
 				"${BUILT_PRODUCTS_DIR}/AMWaveTransition/AMWaveTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/BAFluidView/BAFluidView.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AHKActionSheet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMWaveTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BAFluidView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICountingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,9 +333,11 @@
 				E9B1929B208BCD7D00C2A5CC /* WeightViewController.swift in Sources */,
 				E982C7EB208BC10700763AA1 /* Settings.swift in Sources */,
 				E9113546208FE89C0015CCE3 /* EatViewController.swift in Sources */,
+				E988A43D2091219C007CB2C6 /* UINavigationController-StatusBar.swift in Sources */,
 				E9480F2C208B8366006752AF /* MeasureViewController.swift in Sources */,
 				E99BE1AD208D1CCC009050C7 /* GoalViewController.swift in Sources */,
 				E99E09CD208B3095003A74CF /* Constants.swift in Sources */,
+				E988A43F209123BF007CB2C6 /* Part.swift in Sources */,
 				E9B1929D208BF07B00C2A5CC /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
