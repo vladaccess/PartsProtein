@@ -28,6 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupAppearance() {
         Global.actionSheetAppearance()
+        UITabBar.appearance().tintColor = Tint.mainTint
+        if let font = UIFont(name: "KaushanScript-Regular", size: 22) {
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font:font,NSAttributedStringKey.foregroundColor:UIColor.white]
+        }
+        UINavigationBar.appearance().barTintColor = Tint.mainTint
+        UINavigationBar.appearance().tintColor = Tint.mainTint
         UIApplication.shared.statusBarStyle = .lightContent
         self.window?.backgroundColor = .white
     }
