@@ -11,4 +11,5 @@ target 'PartsProtein' do
   pod 'UICountingLabel'
   pod 'BAFluidView'
   pod 'RealmSwift'
+  pod 'AMPopTip'
 end

@@ -36,8 +36,10 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drop" translatesAutoresizingMaskIntoConstraints="NO" id="ajh-2I-F0o">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="275"/>
+                                        <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ajh-2I-F0o" secondAttribute="trailing" id="9At-V3-d3Q"/>
                                     <constraint firstAttribute="width" secondItem="pfy-4k-ldn" secondAttribute="height" multiplier="1:1" id="DUW-VA-r2e"/>

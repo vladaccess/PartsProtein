@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AHKActionSheet
+import AMPopTip
 
 class Global {
     class func numericToolBar(_ target:AnyObject?,selector:Selector,barColor:UIColor = .white,tintColor:UIColor = Tint.mainTint) -> UIToolbar {
@@ -40,5 +41,19 @@ class Global {
             let bottomInsets = UIApplication.shared.delegate?.window??.safeAreaInsets.bottom ?? 0.0
             AHKActionSheet.appearance().cancelButtonHeight = 44 + bottomInsets
         }
+    }
+    
+    class func showPopTipOnceForKey(_ key:String,userDefaults:UserDefaults,popTipText:String,inView view:UIView,fromFrame frame:CGRect,direction:PopTipDirection,color:UIColor) {
+        if !userDefaults.bool(forKey: key) {
+            userDefaults.set(true, forKey: key)
+            userDefaults.synchronize()
+            let pop = PopTip()
+            pop.bubbleColor = color
+            guard let insets = (UIApplication.shared.delegate as! AppDelegate).window?.safeAreaInsets.bottom else { return }
+            pop.offset = insets + 50
+            pop.edgeMargin = 5
+            pop.show(text: popTipText, direction: .up, maxWidth: 200.0, in: view, from: frame)
+        }
+        
     }
 }
