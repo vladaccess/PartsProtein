@@ -18,6 +18,7 @@ extension EatViewController {
     
     func contractAddButton() {
         addButton.isUserInteractionEnabled = false
+        [smallButton,largeButton].forEach { $0?.isUserInteractionEnabled = false }
         let rotate = POPSpringAnimation(propertyNamed: kPOPLayerRotation)
         rotate?.fromValue = -Double.pi + Double.pi/4
         rotate?.toValue = 0
@@ -50,10 +51,42 @@ extension EatViewController {
         slideUp?.removedOnCompletion = true
         
         
+        
+        
+        
+        
         self.minusButton.pop_add(slideUp, forKey: "slideUp")
         self.addButton.pop_add(color, forKey: "color")
         self.addButton.pop_add(scale, forKey: "scale")
         self.addButton.layer.pop_add(rotate, forKey: "rotate")
+        
+        
+        
+        for button in [smallButton,largeButton] {
+            let pop = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
+            pop?.fromValue = NSValue(cgPoint: CGPoint(x: 1, y: 1))
+            pop?.toValue = NSValue(cgPoint: CGPoint(x: 0.1, y: 0.1))
+            pop?.springBounciness = 5
+            pop?.removedOnCompletion = true
+            button?.pop_add(pop, forKey: "pop")
+        }
+        
+        
+        
+        
+        let left = POPBasicAnimation(propertyNamed: kPOPLayerTranslationX)
+        left?.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        left?.fromValue = -100
+        left?.toValue = 0
+        self.smallButton.layer.pop_add(left, forKey: "left")
+        
+        
+        let right = POPBasicAnimation(propertyNamed: kPOPLayerTranslationX)
+        right?.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        right?.fromValue = 100
+        right?.toValue = 0
+        self.largeButton.layer.pop_add(right, forKey: "right")
+        
     }
     
     func expandedAddButton() {
@@ -91,10 +124,39 @@ extension EatViewController {
         slideDown?.springBounciness = 5
         slideDown?.removedOnCompletion = true
         
+        
+        
         self.minusButton.pop_add(slideDown, forKey: "slideDown")
         self.addButton.pop_add(color, forKey: "color")
         self.addButton.pop_add(scale, forKey: "scale")
         self.addButton.layer.pop_add(rotate, forKey: "rotate")
+        
+        
+        [smallButton,largeButton].forEach { $0?.alpha = 1 }
+        
+        for button in [smallButton,largeButton] {
+            let pop = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
+            pop?.fromValue = NSValue(cgPoint: CGPoint(x: 0.1, y: 0.1))
+            pop?.toValue = NSValue(cgPoint: CGPoint(x: 1.0, y: 1.0))
+            pop?.springBounciness = 5
+            pop?.removedOnCompletion = true
+            button?.pop_add(pop, forKey: "pop")
+        }
+        
+        
+        let left = POPSpringAnimation(propertyNamed: kPOPLayerTranslationX)
+        left?.fromValue = 0
+        left?.toValue = -100
+        left?.springBounciness = 5
+        self.smallButton.layer.pop_add(left, forKey: "left")
+        
+        
+        let right = POPSpringAnimation(propertyNamed: kPOPLayerTranslationX)
+        right?.fromValue = 0
+        right?.toValue = 100
+        right?.springBounciness = 5
+        self.largeButton.layer.pop_add(right, forKey: "right")
+        
         
     }
 }
