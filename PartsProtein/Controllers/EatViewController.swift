@@ -26,9 +26,11 @@ class EatViewController: UIViewController {
     
     var userDefaults = UserDefaults.groupUserDefaults()
     var progressMeter:BAFluidView?
+    var expanded = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        [smallButton,largeButton,addButton].map { $0?.layer.cornerRadius = ($0?.bounds.size.width)!/2 }
         self.title = "Eat!"
         initAnimation()
         
@@ -69,6 +71,14 @@ class EatViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         Global.showPopTipOnceForKey("HEALTH", userDefaults: userDefaults, popTipText: "You can enable HealthCenter in Settings", inView: view, fromFrame: CGRect(x:view.frame.width - 60,y:view.frame.height,width:1,height:1), direction: .up, color:Tint.tint_destructive)
+    }
+    
+    @IBAction func addButtonAction(_ sender:UIButton) {
+        if expanded {
+            self.contractAddButton()
+        }else {
+            self.expandedAddButton()
+        }
     }
     
 

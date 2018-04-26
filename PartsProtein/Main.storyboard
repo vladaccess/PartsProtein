@@ -48,13 +48,14 @@
                                     <constraint firstItem="ajh-2I-F0o" firstAttribute="top" secondItem="pfy-4k-ldn" secondAttribute="top" id="PAd-qc-WXq"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7x-Ku-Ffa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7x-Ku-Ffa">
                                 <rect key="frame" x="152" y="518" width="70" height="70"/>
                                 <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="eEM-BG-UEa"/>
                                     <constraint firstAttribute="height" constant="70" id="iIg-AO-IuW"/>
                                 </constraints>
+                                <state key="normal" image="small-icon"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2g-WE-vii">
                                 <rect key="frame" x="10" y="74" width="50" height="50"/>
@@ -64,13 +65,14 @@
                                 </constraints>
                                 <state key="normal" image="star"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYf-Zq-FdK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYf-Zq-FdK">
                                 <rect key="frame" x="152" y="518" width="70" height="70"/>
                                 <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="FaB-0x-IGG"/>
                                     <constraint firstAttribute="width" constant="70" id="jDW-cP-HIy"/>
                                 </constraints>
+                                <state key="normal" image="large-icon"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-x7-Agk" customClass="UICountingLabel">
                                 <rect key="frame" x="16" y="389" width="343" height="42"/>
@@ -89,6 +91,9 @@
                                     <constraint firstAttribute="width" constant="70" id="zx2-cY-WUu"/>
                                 </constraints>
                                 <state key="normal" image="plus-icon"/>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="ged-Yc-U5F" eventType="touchUpInside" id="RmW-dX-VlQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,7 +142,7 @@
         <scene sceneID="5x1-nj-Zkh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uKB-h1-VJN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Eat" id="r0d-WL-o2R"/>
+                    <tabBarItem key="tabBarItem" title="Eat" image="eat_icon" id="r0d-WL-o2R"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ipg-Jt-5gX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -174,8 +179,11 @@
     </scenes>
     <resources>
         <image name="drop" width="300" height="300"/>
+        <image name="eat_icon" width="30" height="28"/>
+        <image name="large-icon" width="40" height="40"/>
         <image name="minus-icon" width="24" height="24"/>
         <image name="plus-icon" width="40" height="40"/>
+        <image name="small-icon" width="40" height="40"/>
         <image name="star" width="50" height="50"/>
     </resources>
 </document>
