@@ -27,4 +27,40 @@ final class EntryHandler:NSObject {
         return try! Realm()
     }()
     
+    
+    /**
+     Returns an entry for the given date
+    */
+    func entryForDate(date:Date) -> Entry? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let predicate:NSPredicate = NSPredicate(format: "date = %@", argumentArray: [dateFormatter.string(from: date)])
+        let object = realm.objects(Entry.self).filter(predicate).first
+        return object
+    }
+    
+    
+    /**
+     Return current entry
+    */
+    func entryForToday() -> Entry? {
+        return entryForDate(date: Date())
+    }
+    
+    
+    /**
+     Return current entry if available else create new entry
+    */
+    func currentEntry() -> Entry {
+        if let entry = entryForToday() {
+            return entry
+        }else {
+            let newEntry = Entry()
+            try! realm.write {
+                realm.add(newEntry, update: true)
+            }
+            return newEntry
+        }
+    }
+    
 }
