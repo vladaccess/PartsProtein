@@ -8,7 +8,9 @@
 
 import Foundation
 import RealmSwift
-
+/**
+ Sum of portion of entire day
+ */
 class Entry:Object {
     @objc dynamic var date = Entry.defaultDate()
     @objc dynamic var percentage:Double = 0.0
@@ -35,13 +37,37 @@ class Entry:Object {
      - parameter goal: The daily goal
      - parameter date: The date of the portion
      */
-    func addPart(_ quantity:Double,date:Date,goal:Date) {
-        
+    func addPart(_ quantity:Double,date:Date?,goal:Double) {
+        let part = Part(quantity: quantity)
+        self.quantity += quantity
+        if let date = date {
+            part.date = date
+        }
+        parts.append(part)
+        if goal > 0 {
+            percentage = (quantity/goal) * 100
+        }
     }
     /**
      Remove the lastest portion of protein
     */
     func removeLastPart() {
+        if let latestPart = parts.last {
+            self.quantity -= latestPart.quantity
+            if goal > 0 {
+                self.percentage = (quantity/goal) * 100
+            }
+            if percentage < 0 {
+                self.percentage = 0
+            }
+            parts.removeLast()
+        }
         
+    }
+    /**
+     Turn the percentage into String
+    */
+    func formattedPercentage() -> String {
+        return percentage.formattedPercentage()
     }
 }

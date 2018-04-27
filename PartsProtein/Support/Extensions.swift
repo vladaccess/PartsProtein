@@ -13,3 +13,13 @@ extension UserDefaults {
         return UserDefaults(suiteName: "group.\(Constants.bundle())")!
     }
 }
+
+
+extension Double {
+    func formattedPercentage() -> String {
+        let value = self.rounded()
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .percent
+        return numberFormatter.string(for: value/100) ?? "\(value)%"
+    }
+}
