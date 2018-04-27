@@ -33,14 +33,11 @@ class EatViewController: UIViewController {
         [smallButton,largeButton,addButton].map { $0?.layer.cornerRadius = ($0?.bounds.size.width)!/2 }
         self.title = "Eat!"
         initAnimation()
-        
         percentageLabel.animationDuration = 1.5
         percentageLabel.format = "%d%%"
         
-        
     }
     
-    func updateUI() {}
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -73,12 +70,31 @@ class EatViewController: UIViewController {
         Global.showPopTipOnceForKey("HEALTH", userDefaults: userDefaults, popTipText: "You can enable HealthCenter in Settings", inView: view, fromFrame: CGRect(x:view.frame.width - 60,y:view.frame.height,width:1,height:1), direction: .up, color:Tint.tint_destructive)
     }
     
+    // UpdateUI
+    
+    func updateCurrentEntry(_ delta:Double) {
+        
+    }
+    
+    func updateUI() {}
+    
+    
+    // IBActions
+    
     @IBAction func addButtonAction(_ sender:UIButton) {
         if expanded {
             self.contractAddButton()
         }else {
             self.expandedAddButton()
         }
+    }
+    
+    
+    @IBAction func selectionAction(_ sender:UIButton) {
+        contractAddButton()
+        Global.showPopTipOnceForKey("UNDO", userDefaults: userDefaults, popTipText: "Tap here to undo latest action", inView: view, fromFrame: minusButton.frame, direction: .down, color: Tint.mainTint)
+        let portion = smallButton == sender ? Constants.Part.small.key() : Constants.Part.big.key()
+        updateCurrentEntry(userDefaults.double(forKey: portion))
     }
     
 

@@ -14,6 +14,7 @@
 		E926C7D8208CC2E4000F7808 /* PartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E926C7D7208CC2E4000F7808 /* PartsViewController.swift */; };
 		E93BA51A208E87B6000374E2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93BA519208E87B6000374E2 /* NotificationViewController.swift */; };
 		E9480F2C208B8366006752AF /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9480F2B208B8366006752AF /* MeasureViewController.swift */; };
+		E96D815D2092A3A900F64457 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D815C2092A3A900F64457 /* Entry.swift */; };
 		E973F360208A890C00D5C414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973F35F208A890C00D5C414 /* AppDelegate.swift */; };
 		E973F362208A890C00D5C414 /* OverboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973F361208A890C00D5C414 /* OverboardViewController.swift */; };
 		E973F365208A890C00D5C414 /* Overboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E973F363208A890C00D5C414 /* Overboard.storyboard */; };
@@ -40,6 +41,7 @@
 		E926C7D7208CC2E4000F7808 /* PartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsViewController.swift; sourceTree = "<group>"; };
 		E93BA519208E87B6000374E2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		E9480F2B208B8366006752AF /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
+		E96D815C2092A3A900F64457 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		E973F35C208A890C00D5C414 /* PartsProtein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartsProtein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E973F35F208A890C00D5C414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E973F361208A890C00D5C414 /* OverboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverboardViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				E988A43E209123BF007CB2C6 /* Part.swift */,
+				E96D815C2092A3A900F64457 /* Entry.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E973F362208A890C00D5C414 /* OverboardViewController.swift in Sources */,
+				E96D815D2092A3A900F64457 /* Entry.swift in Sources */,
 				E90F0F36208BB41000E6A738 /* Extensions.swift in Sources */,
 				E93BA51A208E87B6000374E2 /* NotificationViewController.swift in Sources */,
 				E973F372208A891F00D5C414 /* Colors.swift in Sources */,

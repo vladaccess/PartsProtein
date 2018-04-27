@@ -56,6 +56,9 @@
                                     <constraint firstAttribute="height" constant="70" id="iIg-AO-IuW"/>
                                 </constraints>
                                 <state key="normal" image="small-icon"/>
+                                <connections>
+                                    <action selector="selectionAction:" destination="ged-Yc-U5F" eventType="touchUpInside" id="jJd-Vd-QlO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2g-WE-vii">
                                 <rect key="frame" x="10" y="74" width="50" height="50"/>
@@ -73,6 +76,9 @@
                                     <constraint firstAttribute="width" constant="70" id="jDW-cP-HIy"/>
                                 </constraints>
                                 <state key="normal" image="large-icon"/>
+                                <connections>
+                                    <action selector="selectionAction:" destination="ged-Yc-U5F" eventType="touchUpInside" id="HtE-jK-5hs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-x7-Agk" customClass="UICountingLabel">
                                 <rect key="frame" x="16" y="389" width="343" height="42"/>
