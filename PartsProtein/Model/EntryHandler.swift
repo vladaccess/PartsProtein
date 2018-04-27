@@ -63,4 +63,19 @@ final class EntryHandler:NSObject {
         }
     }
     
+    /**
+     Create newEntry for date
+    */
+    func createEntryForDate(date:Date) -> Entry {
+        let newEntry = Entry()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        newEntry.date = dateFormatter.string(from: date)
+        try! realm.write {
+            realm.add(newEntry, update: true)
+        }
+        return newEntry
+    }
+    
+    
 }
