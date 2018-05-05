@@ -73,10 +73,12 @@ class EatViewController: UIViewController {
     // UpdateUI
     
     func updateCurrentEntry(_ delta:Double) {
-        
+        EntryHandler.shared.addPart(quantity: delta)
     }
     
-    func updateUI() {}
+    func updateUI() {
+        
+    }
     
     
     // IBActions

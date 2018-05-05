@@ -77,5 +77,24 @@ final class EntryHandler:NSObject {
         return newEntry
     }
     
+    func addPart(quantity:Double) {
+        addPart(quantity, date: nil)
+    }
+    
+    open func addPart(_ quantity:Double,date:Date?) {
+        var entry:Entry?
+        if let date = date {
+            entry = entryForDate(date: date)
+            if entry == nil {
+                entry = createEntryForDate(date: date)
+            }
+        }else {
+            entry = currentEntry()
+        }
+        try! realm.write {
+            entry?.addPart(quantity, date: date, goal: userDefaults.double(forKey: Constants.Part.goal.key()))
+        }
+    }
+    
     
 }
