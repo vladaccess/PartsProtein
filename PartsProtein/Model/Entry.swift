@@ -39,28 +39,30 @@ class Entry:Object {
      */
     func addPart(_ quantity:Double,date:Date?,goal:Double) {
         let part = Part(quantity: quantity)
+        parts.append(part)
         self.quantity += quantity
+        self.goal = goal
         if let date = date {
             part.date = date
         }
-        parts.append(part)
         if goal > 0 {
-            percentage = (quantity/goal) * 100
+            percentage = (self.quantity/self.goal) * 100
         }
     }
+    
     /**
      Remove the lastest portion of protein
     */
     func removeLastPart() {
-        if let latestPart = parts.last {
+        if let latestPart = self.parts.last {
             self.quantity -= latestPart.quantity
             if goal > 0 {
-                self.percentage = (quantity/goal) * 100
+                self.percentage = (self.quantity/self.goal) * 100
             }
-            if percentage < 0 {
+            if self.percentage < 0 {
                 self.percentage = 0
             }
-            parts.removeLast()
+            self.parts.removeLast()
         }
         
     }

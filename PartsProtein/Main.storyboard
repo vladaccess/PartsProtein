@@ -30,6 +30,9 @@
                                 <state key="normal" image="minus-icon">
                                     <color key="titleShadowColor" red="0.50196078431372548" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="removePartAction" destination="ged-Yc-U5F" eventType="touchUpInside" id="Epa-Da-DNE"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfy-4k-ldn">
                                 <rect key="frame" x="50" y="84" width="275" height="275"/>

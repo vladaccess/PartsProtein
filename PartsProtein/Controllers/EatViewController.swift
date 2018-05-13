@@ -11,6 +11,7 @@ import CoreMotion
 import UICountingLabel
 import BAFluidView
 import AMPopTip
+import Realm
 
 
 class EatViewController: UIViewController {
@@ -27,6 +28,7 @@ class EatViewController: UIViewController {
     var userDefaults = UserDefaults.groupUserDefaults()
     var progressMeter:BAFluidView?
     var expanded = false
+    var realmNotification:RLMNotificationToken?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +38,16 @@ class EatViewController: UIViewController {
         percentageLabel.animationDuration = 1.5
         percentageLabel.format = "%d%%"
         
+        
+        realmNotification = EntryHandler.shared.realm.observe { (note, realm) in
+            self.updateUI()
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(EatViewController.updateUI), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        
     }
+    
+    
     
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -50,6 +61,7 @@ class EatViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.view.layoutIfNeeded()
         
         //Set up programmatically that avoid issues
         if progressMeter == nil {
@@ -63,6 +75,7 @@ class EatViewController: UIViewController {
             containerView.insertSubview(progressMeter, belowSubview: maskImage)
             updateUI()
         }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,8 +89,16 @@ class EatViewController: UIViewController {
         EntryHandler.shared.addPart(quantity: delta)
     }
     
-    func updateUI() {
-        
+    @objc func updateUI() {
+        var percentage = EntryHandler.shared.currentPercentage()
+        percentageLabel.countFromCurrentValue(to: CGFloat(round(percentage)))
+        var fillTo = Double(percentage/100)
+        if fillTo > 1 {
+            fillTo = 1
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.progressMeter?.fill(to: NSNumber(value: fillTo))
+        }
     }
     
     
@@ -89,6 +110,16 @@ class EatViewController: UIViewController {
         }else {
             self.expandedAddButton()
         }
+    }
+    
+    @IBAction func removePartAction() {
+        let alert = UIAlertController(title: "Undo", message: "Undo latest action", preferredStyle: .alert)
+        let yes = UIAlertAction(title: "Yes", style: .default) { _ in
+            EntryHandler.shared.removeLastPart()
+        }
+        let no  = UIAlertAction(title: "No", style: .default)
+        [yes,no].forEach { alert.addAction($0) }
+        self.present(alert, animated: true)  { }
     }
     
     

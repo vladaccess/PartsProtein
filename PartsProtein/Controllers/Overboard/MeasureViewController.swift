@@ -36,6 +36,7 @@ class MeasureViewController: OverboardViewController {
 
         if unit == Constants.UnitOfMeasure.gramm {
             grammCheck.pop_add(slideUp, forKey: "SLIDE_UP")
+            Settings.registerDefaultsForGramm()
         }
     }
     

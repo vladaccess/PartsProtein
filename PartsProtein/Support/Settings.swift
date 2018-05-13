@@ -13,6 +13,7 @@ class Settings {
         let userDefaults = UserDefaults.groupUserDefaults()
         userDefaults.set(10, forKey: Constants.Part.small.key())
         userDefaults.set(30, forKey: Constants.Part.big.key())
+        userDefaults.set(160, forKey: Constants.Part.goal.key())
     }
 }
 

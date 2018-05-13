@@ -157,8 +157,8 @@ what measurement system do you prefer?</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYc-wS-jdY">
-                                        <rect key="frame" x="60" y="17" width="78" height="27.666666666666671"/>
-                                        <string key="text">Gramme
+                                        <rect key="frame" x="60.000000000000007" y="17" width="66.666666666666686" height="27.666666666666671"/>
+                                        <string key="text">Gramm
 </string>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

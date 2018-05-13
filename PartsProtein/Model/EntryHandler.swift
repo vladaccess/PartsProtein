@@ -12,20 +12,13 @@ import RealmSwift
  Helper helps to perform operations on Realm
  */
 final class EntryHandler:NSObject {
+    
+    
     static let shared = EntryHandler()
 
     lazy var userDefaults = UserDefaults.groupUserDefaults()
     
-    lazy var realm:Realm = {
-        guard let directory:URL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.\(Constants.bundle())") else {
-            fatalError("Unable to setup Realm. Make sure to setup your app group in the developer portal")
-        }
-        let path = directory.appendingPathComponent("db.realm")
-        var config = Realm.Configuration()
-        config.fileURL = path
-        Realm.Configuration.defaultConfiguration = config
-        return try! Realm()
-    }()
+    open lazy var realm: Realm = try! Realm()
     
     
     /**
@@ -93,6 +86,22 @@ final class EntryHandler:NSObject {
         }
         try! realm.write {
             entry?.addPart(quantity, date: date, goal: userDefaults.double(forKey: Constants.Part.goal.key()))
+        }
+    }
+    
+    
+    
+    func currentPercentage() -> Double {
+        return currentEntry().percentage
+    }
+    
+    func removeLastPart() {
+        let entry = currentEntry()
+        if let lastPart = entry.parts.last {
+            try! realm.write {
+                entry.removeLastPart()
+                realm.delete(lastPart)
+            }
         }
     }
     
