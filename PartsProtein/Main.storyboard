@@ -147,6 +147,22 @@
             </objects>
             <point key="canvasLocation" x="436" y="103.89805097451276"/>
         </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="0Qt-Jx-06A">
+            <objects>
+                <viewController id="AYm-35-uzX" customClass="CalendarViewController" customModule="PartsProtein" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jOj-eb-yQf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jTM-7W-Xu4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LkF-T0-eIF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qz-hq-ISL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="831"/>
+        </scene>
         <!--Eat-->
         <scene sceneID="5x1-nj-Zkh">
             <objects>
@@ -156,7 +172,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ipg-Jt-5gX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.32941176470588235" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -179,14 +195,36 @@
                     </tabBar>
                     <connections>
                         <segue destination="uKB-h1-VJN" kind="relationship" relationship="viewControllers" id="m1Q-HF-oAA"/>
+                        <segue destination="ZtY-iq-fJY" kind="relationship" relationship="viewControllers" id="rVw-xf-8rE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMK-E6-fva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1410" y="531"/>
         </scene>
+        <!--Calendar-->
+        <scene sceneID="cjH-ES-a2T">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZtY-iq-fJY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar-icon" id="Lw3-TO-xv4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gyg-9Q-JwJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.32941176470588235" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AYm-35-uzX" kind="relationship" relationship="rootViewController" id="6gQ-iK-Pur"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ac5-2V-MD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="831"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="calendar-icon" width="30" height="30"/>
         <image name="drop" width="300" height="300"/>
         <image name="eat_icon" width="30" height="28"/>
         <image name="large-icon" width="40" height="40"/>

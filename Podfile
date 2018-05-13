@@ -12,4 +12,5 @@ target 'PartsProtein' do
   pod 'BAFluidView'
   pod 'RealmSwift'
   pod 'AMPopTip'
+  pod 'CVCalendar'
 end

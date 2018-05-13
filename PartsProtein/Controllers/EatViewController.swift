@@ -29,6 +29,7 @@ class EatViewController: UIViewController {
     var progressMeter:BAFluidView?
     var expanded = false
     var realmNotification:RLMNotificationToken?
+    var manager = CMMotionManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,15 @@ class EatViewController: UIViewController {
         initAnimation()
         percentageLabel.animationDuration = 1.5
         percentageLabel.format = "%d%%"
+        
+        manager.accelerometerUpdateInterval = 0.01
+        manager.deviceMotionUpdateInterval = 0.01
+        manager.startDeviceMotionUpdates(to: OperationQueue.main) { (motion, error) in
+            if let motion = motion {
+                let rotation = atan2(motion.gravity.x, motion.gravity.y) - Double.pi
+                self.progressMeter?.transform = CGAffineTransform(rotationAngle: CGFloat(rotation))
+            }
+        }
         
         
         realmNotification = EntryHandler.shared.realm.observe { (note, realm) in
@@ -66,13 +76,13 @@ class EatViewController: UIViewController {
         //Set up programmatically that avoid issues
         if progressMeter == nil {
             let width = containerView.frame.size.width
-            guard let progressMeter = BAFluidView(frame: CGRect(x: 0, y: 0, width: width, height: width), maxAmplitude: 40, minAmplitude: 8, amplitudeIncrement: 1) else { return }
-            progressMeter.fillColor = Tint.mainTint
-            progressMeter.fillAutoReverse = false
-            progressMeter.fillDuration = 1.5
-            progressMeter.fillRepeatCount = 0
-            progressMeter.backgroundColor = .clear
-            containerView.insertSubview(progressMeter, belowSubview: maskImage)
+            progressMeter = BAFluidView(frame: CGRect(x: 0, y: 0, width: width, height: width), maxAmplitude: 40, minAmplitude: 8, amplitudeIncrement: 1)
+            progressMeter!.fillColor = Tint.mainTint
+            progressMeter!.fillAutoReverse = false
+            progressMeter!.fillDuration = 1.2
+            progressMeter!.fillRepeatCount = 0
+            progressMeter!.backgroundColor = .clear
+            containerView.insertSubview(progressMeter!, belowSubview: maskImage)
             updateUI()
         }
         

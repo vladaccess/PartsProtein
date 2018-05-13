@@ -27,6 +27,7 @@
 		E988A44220913ABA007CB2C6 /* EatViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */; };
 		E99BE1AD208D1CCC009050C7 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */; };
 		E99E09CD208B3095003A74CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E09CC208B3095003A74CF /* Constants.swift */; };
+		E9A0F67320A86726001520FB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0F67220A86726001520FB /* CalendarViewController.swift */; };
 		E9B1929B208BCD7D00C2A5CC /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B1929A208BCD7D00C2A5CC /* WeightViewController.swift */; };
 		E9B1929D208BF07B00C2A5CC /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B1929C208BF07B00C2A5CC /* Global.swift */; };
 		E9C0EA922093CAFB004D7FB2 /* EntryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0EA912093CAFB004D7FB2 /* EntryHandler.swift */; };
@@ -57,6 +58,7 @@
 		E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EatViewController+Animations.swift"; sourceTree = "<group>"; };
 		E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		E99E09CC208B3095003A74CF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E9A0F67220A86726001520FB /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		E9B1929A208BCD7D00C2A5CC /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		E9B1929C208BF07B00C2A5CC /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		E9C0EA912093CAFB004D7FB2 /* EntryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryHandler.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				E9113545208FE89C0015CCE3 /* EatViewController.swift */,
+				E9A0F67220A86726001520FB /* CalendarViewController.swift */,
 				E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */,
 				E926C7D6208CBE04000F7808 /* Overboard */,
 			);
@@ -292,6 +295,7 @@
 				"${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework",
 				"${BUILT_PRODUCTS_DIR}/AMWaveTransition/AMWaveTransition.framework",
 				"${BUILT_PRODUCTS_DIR}/BAFluidView/BAFluidView.framework",
+				"${BUILT_PRODUCTS_DIR}/CVCalendar/CVCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework",
@@ -303,6 +307,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMPopTip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMWaveTransition.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BAFluidView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CVCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICountingLabel.framework",
@@ -345,6 +350,7 @@
 				E9C0EA922093CAFB004D7FB2 /* EntryHandler.swift in Sources */,
 				E973F360208A890C00D5C414 /* AppDelegate.swift in Sources */,
 				E9B1929B208BCD7D00C2A5CC /* WeightViewController.swift in Sources */,
+				E9A0F67320A86726001520FB /* CalendarViewController.swift in Sources */,
 				E982C7EB208BC10700763AA1 /* Settings.swift in Sources */,
 				E9113546208FE89C0015CCE3 /* EatViewController.swift in Sources */,
 				E988A43D2091219C007CB2C6 /* UINavigationController-StatusBar.swift in Sources */,
