@@ -105,5 +105,13 @@ final class EntryHandler:NSObject {
         }
     }
     
+    func daysTracked() -> Int {
+        return realm.objects(Entry.self).count
+    }
+    
+    func overAllQuantity() -> Double {
+        return realm.objects(Entry.self).sum(ofProperty: "quantity") as Double
+    }
+    
     
 }

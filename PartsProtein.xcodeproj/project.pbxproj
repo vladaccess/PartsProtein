@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		82E0E2728CEDA5BFFDF9B541 /* Pods_PartsProtein.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFDE474377E6C468AE8CED6 /* Pods_PartsProtein.framework */; };
+		E905ED9220A8EB9700834392 /* CalendarViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905ED9120A8EB9700834392 /* CalendarViewController+Animations.swift */; };
 		E90F0F36208BB41000E6A738 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90F0F35208BB41000E6A738 /* Extensions.swift */; };
 		E9113544208FE6990015CCE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9113543208FE6990015CCE3 /* Main.storyboard */; };
 		E9113546208FE89C0015CCE3 /* EatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9113545208FE89C0015CCE3 /* EatViewController.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		BE3C2A3B4FD4492FCB3DE57A /* Pods-PartsProtein.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsProtein.release.xcconfig"; path = "Pods/Target Support Files/Pods-PartsProtein/Pods-PartsProtein.release.xcconfig"; sourceTree = "<group>"; };
 		C73DEC36FE77FE0290DEECED /* Pods-PartsProtein.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsProtein.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PartsProtein/Pods-PartsProtein.debug.xcconfig"; sourceTree = "<group>"; };
+		E905ED9120A8EB9700834392 /* CalendarViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalendarViewController+Animations.swift"; sourceTree = "<group>"; };
 		E90F0F35208BB41000E6A738 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E9113543208FE6990015CCE3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E9113545208FE89C0015CCE3 /* EatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				E9113545208FE89C0015CCE3 /* EatViewController.swift */,
 				E9A0F67220A86726001520FB /* CalendarViewController.swift */,
+				E905ED9120A8EB9700834392 /* CalendarViewController+Animations.swift */,
 				E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */,
 				E926C7D6208CBE04000F7808 /* Overboard */,
 			);
@@ -349,6 +352,7 @@
 				E926C7D8208CC2E4000F7808 /* PartsViewController.swift in Sources */,
 				E9C0EA922093CAFB004D7FB2 /* EntryHandler.swift in Sources */,
 				E973F360208A890C00D5C414 /* AppDelegate.swift in Sources */,
+				E905ED9220A8EB9700834392 /* CalendarViewController+Animations.swift in Sources */,
 				E9B1929B208BCD7D00C2A5CC /* WeightViewController.swift in Sources */,
 				E9A0F67320A86726001520FB /* CalendarViewController.swift in Sources */,
 				E982C7EB208BC10700763AA1 /* Settings.swift in Sources */,

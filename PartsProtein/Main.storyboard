@@ -154,14 +154,145 @@
                     <view key="view" contentMode="scaleToFill" id="jOj-eb-yQf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybz-K4-St9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="n32-S4-Rpb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KaushanScript-Regular" family="Kaushan Script" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.32941176470588235" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMs-bh-0WT" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="104" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="g7o-OF-sSY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZ2-c2-7z0" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="134" width="375" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="mEJ-fG-qSq"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KP-U4-dUS" customClass="UICountingLabel">
+                                <rect key="frame" x="16" y="104" width="343" height="93"/>
+                                <fontDescription key="fontDescription" name="KaushanScript-Regular" family="Kaushan Script" pointSize="64"/>
+                                <color key="textColor" red="0.0" green="0.32941176470588235" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gramms eats over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbS-n3-6s2">
+                                <rect key="frame" x="16" y="205" width="343" height="25"/>
+                                <fontDescription key="fontDescription" name="KaushanScript-Regular" family="Kaushan Script" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.32941176470588235" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVJ-hL-vqz" customClass="UICountingLabel">
+                                <rect key="frame" x="16" y="234" width="343" height="93"/>
+                                <fontDescription key="fontDescription" name="KaushanScript-Regular" family="Kaushan Script" pointSize="64"/>
+                                <color key="textColor" red="0.0" green="0.32941176470588235" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vZ-NA-yNW">
+                                <rect key="frame" x="16" y="327" width="343" height="25"/>
+                                <fontDescription key="fontDescription" name="KaushanScript-Regular" family="Kaushan Script" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.32941176470588235" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ze-9S-mtg">
+                                <rect key="frame" x="16" y="394" width="343" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.32941176470588235" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2v3-d5-QCY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KaushanScript-Regular" family="Kaushan Script" pointSize="17"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareAction:" destination="AYm-35-uzX" eventType="touchUpInside" id="9as-wt-mX4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4s-0e-z0q">
+                                <rect key="frame" x="16" y="442" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fZ9-Lq-GyX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KaushanScript-Regular" family="Kaushan Script" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.32941176470588235" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLc-DX-WG5">
+                                <rect key="frame" x="339" y="451" width="20" height="22"/>
+                                <state key="normal" image="tiny-add"/>
+                                <connections>
+                                    <action selector="addExtraPart:" destination="AYm-35-uzX" eventType="touchUpInside" id="ftO-3I-TzO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AVJ-hL-vqz" firstAttribute="top" secondItem="jTM-7W-Xu4" secondAttribute="top" constant="170" id="0eo-tM-9AR"/>
+                            <constraint firstItem="ybz-K4-St9" firstAttribute="top" secondItem="jTM-7W-Xu4" secondAttribute="top" id="2TR-Gf-kEL"/>
+                            <constraint firstItem="jTM-7W-Xu4" firstAttribute="trailing" secondItem="qZ2-c2-7z0" secondAttribute="trailing" id="4N9-yp-eIF"/>
+                            <constraint firstItem="qZ2-c2-7z0" firstAttribute="top" secondItem="vMs-bh-0WT" secondAttribute="bottom" id="63d-Ap-icY"/>
+                            <constraint firstItem="O4s-0e-z0q" firstAttribute="leading" secondItem="jTM-7W-Xu4" secondAttribute="leading" constant="16" id="75z-UG-S6x"/>
+                            <constraint firstItem="jTM-7W-Xu4" firstAttribute="trailing" secondItem="HLc-DX-WG5" secondAttribute="trailing" constant="16" id="8zn-zP-cQW"/>
+                            <constraint firstItem="jTM-7W-Xu4" firstAttribute="trailing" secondItem="2vZ-NA-yNW" secondAttribute="trailing" constant="16" id="DD5-Uv-kcT"/>
+                            <constraint firstItem="jTM-7W-Xu4" firstAttribute="trailing" secondItem="vMs-bh-0WT" secondAttribute="trailing" id="FF6-nf-atb"/>
+                            <constraint firstItem="HLc-DX-WG5" firstAttribute="centerY" secondItem="O4s-0e-z0q" secondAttribute="centerY" id="HYd-Df-x5K"/>
+                            <constraint firstItem="AVJ-hL-vqz" firstAttribute="leading" secondItem="jTM-7W-Xu4" secondAttribute="leading" constant="16" id="HwP-Tz-mMn"/>
+                            <constraint firstItem="9KP-U4-dUS" firstAttribute="top" secondItem="jTM-7W-Xu4" secondAttribute="top" constant="40" id="K39-st-P6P"/>
+                            <constraint firstItem="9KP-U4-dUS" firstAttribute="leading" secondItem="jTM-7W-Xu4" secondAttribute="leading" constant="16" id="Nze-rJ-jF4"/>
+                            <constraint firstItem="O4s-0e-z0q" firstAttribute="top" secondItem="qZ2-c2-7z0" secondAttribute="bottom" constant="8" id="Qdw-sd-2pV"/>
+                            <constraint firstItem="6Ze-9S-mtg" firstAttribute="top" secondItem="jTM-7W-Xu4" secondAttribute="top" constant="330" id="RWV-ir-eR4"/>
+                            <constraint firstItem="O4s-0e-z0q" firstAttribute="centerX" secondItem="jTM-7W-Xu4" secondAttribute="centerX" id="Rj8-NB-bPw"/>
+                            <constraint firstItem="jTM-7W-Xu4" firstAttribute="trailing" secondItem="LbS-n3-6s2" secondAttribute="trailing" constant="16" id="Rse-zZ-mar"/>
+                            <constraint firstItem="2vZ-NA-yNW" firstAttribute="leading" secondItem="jTM-7W-Xu4" secondAttribute="leading" constant="16" id="Uea-oF-Y0F"/>
+                            <constraint firstItem="jTM-7W-Xu4" firstAttribute="trailing" secondItem="O4s-0e-z0q" secondAttribute="trailing" constant="16" id="V2Y-1O-oMr"/>
+                            <constraint firstItem="jTM-7W-Xu4" firstAttribute="trailing" secondItem="AVJ-hL-vqz" secondAttribute="trailing" constant="16" id="WJz-p9-GuT"/>
+                            <constraint firstItem="6Ze-9S-mtg" firstAttribute="leading" secondItem="jTM-7W-Xu4" secondAttribute="leading" constant="16" id="WYk-In-xLb"/>
+                            <constraint firstItem="jTM-7W-Xu4" firstAttribute="trailing" secondItem="ybz-K4-St9" secondAttribute="trailing" id="foo-uZ-Zxg"/>
+                            <constraint firstItem="LbS-n3-6s2" firstAttribute="leading" secondItem="jTM-7W-Xu4" secondAttribute="leading" constant="16" id="gGB-c5-2zO"/>
+                            <constraint firstItem="jTM-7W-Xu4" firstAttribute="trailing" secondItem="6Ze-9S-mtg" secondAttribute="trailing" constant="16" id="hBY-NU-JJd"/>
+                            <constraint firstItem="LbS-n3-6s2" firstAttribute="top" secondItem="9KP-U4-dUS" secondAttribute="bottom" constant="8" symbolic="YES" id="iSv-JI-52f"/>
+                            <constraint firstItem="ybz-K4-St9" firstAttribute="leading" secondItem="jTM-7W-Xu4" secondAttribute="leading" id="iaQ-Bb-kfW"/>
+                            <constraint firstItem="vMs-bh-0WT" firstAttribute="top" secondItem="jTM-7W-Xu4" secondAttribute="top" constant="40" id="qAc-11-2hh"/>
+                            <constraint firstItem="2vZ-NA-yNW" firstAttribute="top" secondItem="AVJ-hL-vqz" secondAttribute="bottom" id="rEo-pu-VVf"/>
+                            <constraint firstItem="vMs-bh-0WT" firstAttribute="leading" secondItem="jTM-7W-Xu4" secondAttribute="leading" id="ska-A6-4Zp"/>
+                            <constraint firstItem="qZ2-c2-7z0" firstAttribute="leading" secondItem="jTM-7W-Xu4" secondAttribute="leading" id="tjK-t4-KTN"/>
+                            <constraint firstItem="jTM-7W-Xu4" firstAttribute="trailing" secondItem="9KP-U4-dUS" secondAttribute="trailing" constant="16" id="zxe-YL-bTS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jTM-7W-Xu4"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LkF-T0-eIF"/>
+                    <navigationItem key="navigationItem" id="LkF-T0-eIF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="NdG-d2-zYY">
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="HLc-DX-WG5" id="MIe-1P-3h1"/>
+                        <outlet property="calendarConstraints" destination="qAc-11-2hh" id="ycX-zG-Gqn"/>
+                        <outlet property="calendarContent" destination="qZ2-c2-7z0" id="Xso-k4-9M1"/>
+                        <outlet property="calendarMenu" destination="vMs-bh-0WT" id="Glx-w0-Qcu"/>
+                        <outlet property="dailyLabel" destination="O4s-0e-z0q" id="Fi6-zR-CLh"/>
+                        <outlet property="daysCountLabel" destination="AVJ-hL-vqz" id="WKA-4f-3qs"/>
+                        <outlet property="daysLabel" destination="2vZ-NA-yNW" id="mKI-c6-nwF"/>
+                        <outlet property="daysLabelConstraint" destination="0eo-tM-9AR" id="jbP-mF-muL"/>
+                        <outlet property="measureLabel" destination="LbS-n3-6s2" id="1a2-KM-Zww"/>
+                        <outlet property="monthLabel" destination="ybz-K4-St9" id="zfO-aF-gBd"/>
+                        <outlet property="quantityLabel" destination="9KP-U4-dUS" id="Jmv-YF-VjE"/>
+                        <outlet property="quantityLabelConstraint" destination="K39-st-P6P" id="lOQ-l5-Vze"/>
+                        <outlet property="shareButton" destination="6Ze-9S-mtg" id="IH6-Wd-XpX"/>
+                        <outlet property="shareButtonConstaints" destination="RWV-ir-eR4" id="9Cx-4h-DRG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1qz-hq-ISL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="831"/>
+            <point key="canvasLocation" x="436" y="830.73463268365822"/>
         </scene>
         <!--Eat-->
         <scene sceneID="5x1-nj-Zkh">
@@ -232,5 +363,6 @@
         <image name="plus-icon" width="40" height="40"/>
         <image name="small-icon" width="40" height="40"/>
         <image name="star" width="50" height="50"/>
+        <image name="tiny-add" width="20" height="20"/>
     </resources>
 </document>

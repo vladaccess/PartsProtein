@@ -43,7 +43,7 @@ class Global {
         }
     }
     
-    class func showPopTipOnceForKey(_ key:String,userDefaults:UserDefaults,popTipText:String,inView view:UIView,fromFrame frame:CGRect,direction:PopTipDirection,color:UIColor) {
+    class func showPopTipOnceForKey(_ key:String,userDefaults:UserDefaults,popTipText:String,inView view:UIView,fromFrame frame:CGRect,direction:PopTipDirection = .down,color:UIColor = Tint.mainTint) {
         if !userDefaults.bool(forKey: key) {
             userDefaults.set(true, forKey: key)
             userDefaults.synchronize()
