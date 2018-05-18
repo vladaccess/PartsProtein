@@ -271,6 +271,9 @@
                     <navigationItem key="navigationItem" id="LkF-T0-eIF">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="NdG-d2-zYY">
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="presentStates" destination="AYm-35-uzX" id="3NG-H5-Fed"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

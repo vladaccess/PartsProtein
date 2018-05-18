@@ -49,6 +49,10 @@ class CalendarViewController: UIViewController {
         initAnimations()
     }
     
+    @IBAction func presentStates() {
+        animateShareView()
+    }
+    
     lazy var actionSheet:AHKActionSheet = {
         let actionSheet = AHKActionSheet(title: "Add a new portion:")
         actionSheet?.addButton(withTitle: "Small part", type: AHKActionSheetButtonType.default, handler: { (action) in
