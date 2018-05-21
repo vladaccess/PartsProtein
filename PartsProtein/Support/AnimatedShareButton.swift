@@ -23,7 +23,21 @@ class AnimatedShareButton: UIButton {
         
         let lineWidth = CGFloat(1.5)
         
+        box.path = {
+            var path = CGMutablePath()
+            path.move(to: CGPoint(x: frame.size.width - lineWidth/2, y: frame.size.height * 0.2))
+            path.addLine(to: CGPoint(x: lineWidth/2, y: frame.size.height * 0.2))
+            path.addLine(to: CGPoint(x: lineWidth/2, y: frame.size.height - lineWidth/2))
+            path.addLine(to: CGPoint(x: frame.size.width - lineWidth/2, y: frame.size.height - lineWidth/2))
+            return path
+        }()
         
+        arrow.path = {
+           var path = CGMutablePath()
+            path.move(to:CGPoint(x: frame.size.width * 0.5 - lineWidth/2, y: 0))
+            path.addLine(to: CGPoint(x: frame.size.width * 0.5 - lineWidth/2, y: frame.size.width * 0.7))
+            return path
+        }()
     }
     
     required init?(coder aDecoder: NSCoder) {
