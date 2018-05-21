@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import CoreGraphics
+import QuartzCore
 
 class AnimatedShareButton: UIButton {
+    
+    var box = CAShapeLayer()
+    var leftShoulder = CAShapeLayer()
+    var rightShoulder = CAShapeLayer()
+    var arrow = CAShapeLayer()
 
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        let lineWidth = CGFloat(1.5)
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
