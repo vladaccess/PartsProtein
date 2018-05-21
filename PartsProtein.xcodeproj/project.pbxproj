@@ -26,6 +26,7 @@
 		E988A43D2091219C007CB2C6 /* UINavigationController-StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */; };
 		E988A43F209123BF007CB2C6 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A43E209123BF007CB2C6 /* Part.swift */; };
 		E988A44220913ABA007CB2C6 /* EatViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */; };
+		E992AABA20B3581A000F3428 /* AnimatedShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E992AAB920B3581A000F3428 /* AnimatedShareButton.swift */; };
 		E99BE1AD208D1CCC009050C7 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */; };
 		E99E09CD208B3095003A74CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E09CC208B3095003A74CF /* Constants.swift */; };
 		E9A0F67320A86726001520FB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0F67220A86726001520FB /* CalendarViewController.swift */; };
@@ -58,6 +59,7 @@
 		E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController-StatusBar.swift"; sourceTree = "<group>"; };
 		E988A43E209123BF007CB2C6 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EatViewController+Animations.swift"; sourceTree = "<group>"; };
+		E992AAB920B3581A000F3428 /* AnimatedShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedShareButton.swift; sourceTree = "<group>"; };
 		E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		E99E09CC208B3095003A74CF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9A0F67220A86726001520FB /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -102,8 +104,7 @@
 			children = (
 				E9113545208FE89C0015CCE3 /* EatViewController.swift */,
 				E9A0F67220A86726001520FB /* CalendarViewController.swift */,
-				E905ED9120A8EB9700834392 /* CalendarViewController+Animations.swift */,
-				E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */,
+				E992AAB820B356C8000F3428 /* Support */,
 				E926C7D6208CBE04000F7808 /* Overboard */,
 			);
 			path = Controllers;
@@ -166,6 +167,7 @@
 				E982C7EA208BC10700763AA1 /* Settings.swift */,
 				E9B1929C208BF07B00C2A5CC /* Global.swift */,
 				E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */,
+				E992AAB920B3581A000F3428 /* AnimatedShareButton.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -178,6 +180,15 @@
 				E9C0EA912093CAFB004D7FB2 /* EntryHandler.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E992AAB820B356C8000F3428 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E905ED9120A8EB9700834392 /* CalendarViewController+Animations.swift */,
+				E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		E9EC7EDF208B675A00B99254 /* Resources */ = {
@@ -347,6 +358,7 @@
 				E96D815D2092A3A900F64457 /* Entry.swift in Sources */,
 				E90F0F36208BB41000E6A738 /* Extensions.swift in Sources */,
 				E93BA51A208E87B6000374E2 /* NotificationViewController.swift in Sources */,
+				E992AABA20B3581A000F3428 /* AnimatedShareButton.swift in Sources */,
 				E973F372208A891F00D5C414 /* Colors.swift in Sources */,
 				E988A44220913ABA007CB2C6 /* EatViewController+Animations.swift in Sources */,
 				E926C7D8208CC2E4000F7808 /* PartsViewController.swift in Sources */,

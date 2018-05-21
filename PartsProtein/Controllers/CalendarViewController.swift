@@ -37,6 +37,8 @@ class CalendarViewController: UIViewController {
     var showingStats = false
     var animating = false
     
+    
+    
     override func viewDidLoad() {
         title = "My Progress"
         super.viewDidLoad()
@@ -45,11 +47,17 @@ class CalendarViewController: UIViewController {
         [quantityLabel,daysCountLabel,daysLabel,measureLabel].forEach { $0?.textColor = Tint.mainTint}
         shareButton.backgroundColor = Tint.mainTint
         
+        self.navigationItem.rightBarButtonItem = {
+           let animatedShareButton = AnimatedShareButton(frame: CGRect(x: 0, y: 0, width: 22, height: 22))
+            animatedShareButton.addTarget(self, action: #selector(presentStates), for: .touchUpInside)
+            return UIBarButtonItem(customView: animatedShareButton)
+        }()
+        
         setupCalendar()
         initAnimations()
     }
     
-    @IBAction func presentStates() {
+    @objc func presentStates() {
         animateShareView()
     }
     
