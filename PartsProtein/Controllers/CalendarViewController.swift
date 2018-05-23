@@ -86,13 +86,14 @@ class CalendarViewController: UIViewController {
         
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         Global.showPopTipOnceForKey("SHARE", userDefaults: userDefaults,
                                      popTipText: NSLocalizedString("share poptip", comment: ""),
                                      inView: view,
                                      fromFrame: CGRect(x: view.frame.size.width - 28, y: -10, width: 1, height: 1))
-        
+        updateStates()
         dailyLabel.text = dateLabelString(Date())
     }
     
@@ -106,9 +107,16 @@ class CalendarViewController: UIViewController {
         monthLabel.text = date.globalDescription
     }
     
+    func updateStates() {
+        daysCountLabel.countFromZero(to: CGFloat(EntryHandler.shared.daysTracked()))
+        quantityLabel.countFromZero(to: CGFloat(EntryHandler.shared.overAllQuantity()))
+    }
+    
     @IBAction func addExtraPart(_ sender:UIButton) {
         actionSheet.show()
     }
+    
+    
 
 }
 
