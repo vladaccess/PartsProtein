@@ -83,7 +83,9 @@ class CalendarViewController: UIViewController {
     }
     
     @IBAction func shareAction(_ sender:UIButton) {
-        
+        let text = ["Gramm",Int(EntryHandler.shared.overAllQuantity()),Int(EntryHandler.shared.daysTracked())] as [Any]
+        let activityVC = UIActivityViewController(activityItems: text, applicationActivities: nil)
+        present(activityVC, animated: true)
     }
     
     
