@@ -47,17 +47,11 @@ class CalendarViewController: UIViewController {
         [quantityLabel,daysCountLabel,daysLabel,measureLabel].forEach { $0?.textColor = Tint.mainTint}
         shareButton.backgroundColor = Tint.mainTint
         
-        self.navigationItem.rightBarButtonItem = {
-           let animatedShareButton = AnimatedShareButton(frame: CGRect(x: 0, y: 0, width: 22, height: 22))
-            animatedShareButton.addTarget(self, action: #selector(presentStates), for: .touchUpInside)
-            return UIBarButtonItem(customView: animatedShareButton)
-        }()
-        
         setupCalendar()
         initAnimations()
     }
     
-    @objc func presentStates() {
+    @IBAction func presentStates() {
         animateShareView()
     }
     

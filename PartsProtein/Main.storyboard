@@ -268,7 +268,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jTM-7W-Xu4"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LkF-T0-eIF"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="NKA-Kr-j7G"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="LkF-T0-eIF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="eeJ-zc-xwq">
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="presentStates" destination="AYm-35-uzX" id="tME-n4-Bm5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addButton" destination="HLc-DX-WG5" id="MIe-1P-3h1"/>
                         <outlet property="calendarConstraints" destination="qAc-11-2hh" id="ycX-zG-Gqn"/>
