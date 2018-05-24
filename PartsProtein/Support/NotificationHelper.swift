@@ -40,8 +40,8 @@ class NotificationHelper {
         
         while hour <= endHour {
             let content = UNMutableNotificationContent()
-            content.title = "The title"
-            content.body = "The body"
+            content.title = "Reminder"
+            content.body = "I want to remind you eat the protein"
             content.sound = UNNotificationSound.default()
             
             var date = DateComponents()
