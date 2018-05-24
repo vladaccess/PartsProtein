@@ -12,6 +12,9 @@ import UserNotifications
 
 
 class NotificationHelper {
+    
+    
+    
     class func askPermission() {
         let center = UNUserNotificationCenter.current()
         let options:UNAuthorizationOptions = [.alert,.badge,.sound]
@@ -20,11 +23,42 @@ class NotificationHelper {
                 print("Couldn't perform the autorization - \(error.localizedDescription)")
                 return
             }
+        }
+    }
+    
+    
+    class func unschoeduleNotification() {
+        UIApplication.shared.unregisterForRemoteNotifications()
+    }
+    
+    class func registerNotification() {
+        let userDefautls = UserDefaults.groupUserDefaults()
+        let startHour = userDefautls.integer(forKey: Constants.Notification.from.key())
+        let endHour = userDefautls.integer(forKey: Constants.Notification.to.key())
+        let interval = userDefautls.integer(forKey: Constants.Notification.interval.key())
+        var hour = startHour
+        
+        while hour <= endHour {
+            let content = UNMutableNotificationContent()
+            content.title = "The title"
+            content.body = "The body"
+            content.sound = UNNotificationSound.default()
             
-            if granted {
-                UIApplication.shared.registerForRemoteNotifications()
-                print("Register did successfully")
-            }
+            var date = DateComponents()
+            date.hour = hour
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+            let ident = UUID().uuidString
+            
+            let request = UNNotificationRequest(identifier: ident, content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
+                if error != nil {
+                    print("Couldn't add request to system - \(error?.localizedDescription)")
+                }
+            })
+            
+            hour += interval
         }
     }
 }

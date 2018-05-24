@@ -90,6 +90,7 @@ class NotificationViewController: OverboardViewController {
         userDefaults.set(true, forKey: Constants.General.overboardingShown.key())
         if notificationSwitch.isOn {
             NotificationHelper.askPermission()
+            NotificationHelper.registerNotification()
         }
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             appDelegate.loadMainStoryboard()
