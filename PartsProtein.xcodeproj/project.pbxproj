@@ -14,6 +14,7 @@
 		E9113546208FE89C0015CCE3 /* EatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9113545208FE89C0015CCE3 /* EatViewController.swift */; };
 		E926C7D8208CC2E4000F7808 /* PartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E926C7D7208CC2E4000F7808 /* PartsViewController.swift */; };
 		E93BA51A208E87B6000374E2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93BA519208E87B6000374E2 /* NotificationViewController.swift */; };
+		E940CBBF20B73F32000D6CA2 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940CBBE20B73F32000D6CA2 /* NotificationHelper.swift */; };
 		E9480F2C208B8366006752AF /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9480F2B208B8366006752AF /* MeasureViewController.swift */; };
 		E96D815D2092A3A900F64457 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D815C2092A3A900F64457 /* Entry.swift */; };
 		E973F360208A890C00D5C414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973F35F208A890C00D5C414 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		E9113545208FE89C0015CCE3 /* EatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatViewController.swift; sourceTree = "<group>"; };
 		E926C7D7208CC2E4000F7808 /* PartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsViewController.swift; sourceTree = "<group>"; };
 		E93BA519208E87B6000374E2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		E940CBBE20B73F32000D6CA2 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		E9480F2B208B8366006752AF /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
 		E96D815C2092A3A900F64457 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		E973F35C208A890C00D5C414 /* PartsProtein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartsProtein.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 				E90F0F35208BB41000E6A738 /* Extensions.swift */,
 				E982C7EA208BC10700763AA1 /* Settings.swift */,
 				E9B1929C208BF07B00C2A5CC /* Global.swift */,
+				E940CBBE20B73F32000D6CA2 /* NotificationHelper.swift */,
 				E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */,
 			);
 			path = Support;
@@ -357,6 +360,7 @@
 				E93BA51A208E87B6000374E2 /* NotificationViewController.swift in Sources */,
 				E973F372208A891F00D5C414 /* Colors.swift in Sources */,
 				E988A44220913ABA007CB2C6 /* EatViewController+Animations.swift in Sources */,
+				E940CBBF20B73F32000D6CA2 /* NotificationHelper.swift in Sources */,
 				E926C7D8208CC2E4000F7808 /* PartsViewController.swift in Sources */,
 				E9C0EA922093CAFB004D7FB2 /* EntryHandler.swift in Sources */,
 				E973F360208A890C00D5C414 /* AppDelegate.swift in Sources */,
