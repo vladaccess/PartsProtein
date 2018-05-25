@@ -564,8 +564,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TmA-jF-jFB">
+                                                    <rect key="frame" x="318" y="7" width="51" height="31"/>
+                                                </switch>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="TmA-jF-jFB" secondAttribute="trailing" constant="8" id="5q6-Jc-4yp"/>
+                                                <constraint firstItem="TmA-jF-jFB" firstAttribute="centerY" secondItem="eEf-IC-AIx" secondAttribute="centerY" id="OdI-i8-fmO"/>
                                                 <constraint firstItem="WvV-Mb-U9V" firstAttribute="leading" secondItem="eEf-IC-AIx" secondAttribute="leading" constant="16" id="P0w-QG-GQN"/>
                                                 <constraint firstItem="WvV-Mb-U9V" firstAttribute="centerY" secondItem="eEf-IC-AIx" secondAttribute="centerY" id="YZc-lz-bcj"/>
                                             </constraints>
@@ -580,6 +585,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Preferences" id="CrD-Da-hN2"/>
+                    <connections>
+                        <outlet property="bigPortionTF" destination="N3R-cX-tfU" id="2Wx-yg-DRw"/>
+                        <outlet property="everyLabel" destination="yUk-d0-c6p" id="gPR-sH-N8d"/>
+                        <outlet property="fromLabel" destination="Yqy-5Y-I81" id="fvc-Vv-60e"/>
+                        <outlet property="goalTF" destination="UDM-is-SmR" id="eI1-xg-lQ3"/>
+                        <outlet property="healthSwitch" destination="TmA-jF-jFB" id="jTt-AZ-mAL"/>
+                        <outlet property="notificationSwitch" destination="D6g-g6-VAW" id="uKN-Cp-aXF"/>
+                        <outlet property="smallPortionTF" destination="eWg-EM-OlT" id="dic-fb-AbK"/>
+                        <outlet property="toLabel" destination="LGU-bp-I7N" id="o6P-MQ-Qft"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvc-d4-Snn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
