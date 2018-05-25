@@ -27,6 +27,7 @@
 		E988A43D2091219C007CB2C6 /* UINavigationController-StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */; };
 		E988A43F209123BF007CB2C6 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A43E209123BF007CB2C6 /* Part.swift */; };
 		E988A44220913ABA007CB2C6 /* EatViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */; };
+		E99BAE5D20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BAE5C20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift */; };
 		E99BE1AD208D1CCC009050C7 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */; };
 		E99E09CD208B3095003A74CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E09CC208B3095003A74CF /* Constants.swift */; };
 		E9A0F67320A86726001520FB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A0F67220A86726001520FB /* CalendarViewController.swift */; };
@@ -60,6 +61,7 @@
 		E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController-StatusBar.swift"; sourceTree = "<group>"; };
 		E988A43E209123BF007CB2C6 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EatViewController+Animations.swift"; sourceTree = "<group>"; };
+		E99BAE5C20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		E99E09CC208B3095003A74CF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9A0F67220A86726001520FB /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				E9113545208FE89C0015CCE3 /* EatViewController.swift */,
 				E9A0F67220A86726001520FB /* CalendarViewController.swift */,
+				E99BAE5C20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift */,
 				E992AAB820B356C8000F3428 /* Support */,
 				E926C7D6208CBE04000F7808 /* Overboard */,
 			);
@@ -375,6 +378,7 @@
 				E99E09CD208B3095003A74CF /* Constants.swift in Sources */,
 				E988A43F209123BF007CB2C6 /* Part.swift in Sources */,
 				E9B1929D208BF07B00C2A5CC /* Global.swift in Sources */,
+				E99BAE5D20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
