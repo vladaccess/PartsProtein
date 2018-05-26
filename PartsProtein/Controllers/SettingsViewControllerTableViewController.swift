@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewControllerTableViewController: UITableViewController {
+class SettingsViewControllerTableViewController: UITableViewController,UITextFieldDelegate {
     
     let userDefaults = UserDefaults.groupUserDefaults()
     
@@ -54,6 +54,33 @@ class SettingsViewControllerTableViewController: UITableViewController {
     
      override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44.0
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == smallPortionTF {
+            storeValue(smallPortionTF, to: Constants.Part.small.key())
+        }
+        if textField == bigPortionTF {
+            storeValue(bigPortionTF, to: Constants.Part.big.key())
+        }
+        if textField == goalTF {
+            storeValue(goalTF, to: Constants.Part.goal.key())
+        }
+    }
+    
+    func storeValue(_ textField:UITextField,to key:String) {
+        guard let text = textField.text else { return }
+        var numberFormatter:NumberFormatter {
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            return numberFormatter
+        }
+        
+        let numberText = numberFormatter.number(from: text) as? Double ?? 0.0
+    
+        userDefaults.set(numberText, forKey: key)
+        userDefaults.synchronize()
+        
     }
 
 
