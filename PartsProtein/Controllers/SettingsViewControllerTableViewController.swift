@@ -12,6 +12,7 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
     
     let userDefaults = UserDefaults.groupUserDefaults()
     
+    
     @IBOutlet weak var notificationSwitch:UISwitch!
     @IBOutlet weak var healthSwitch:UISwitch!
     @IBOutlet weak var smallPortionTF:UITextField!
@@ -21,6 +22,14 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
     @IBOutlet weak var toLabel:UILabel!
     @IBOutlet weak var everyLabel:UILabel!
     
+    
+    
+    var numberFormatter:NumberFormatter {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        return numberFormatter
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Preferences"
@@ -29,6 +38,7 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
             textF?.inputAccessoryView = Global.numericToolBar(textF, selector: #selector(UIResponder.resignFirstResponder))
         }
     }
+    
 
 
     // MARK: - Table view data source
@@ -70,17 +80,25 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
     
     func storeValue(_ textField:UITextField,to key:String) {
         guard let text = textField.text else { return }
-        var numberFormatter:NumberFormatter {
-            let numberFormatter = NumberFormatter()
-            numberFormatter.numberStyle = .decimal
-            return numberFormatter
-        }
         
         let numberText = numberFormatter.number(from: text) as? Double ?? 0.0
     
         userDefaults.set(numberText, forKey: key)
         userDefaults.synchronize()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateUI()
+    }
+    
+    func updateUI() {
+        smallPortionTF.text = userDefaults.string(forKey: Constants.Part.small.key())
+        bigPortionTF.text = userDefaults.string(forKey: Constants.Part.big.key())
+        goalTF.text = userDefaults.string(forKey: Constants.Part.goal.key())
+        
+        notificationSwitch.isOn = userDefaults.bool(forKey: Constants.Notification.on.key())
     }
 
 
