@@ -75,6 +75,7 @@ final class EntryHandler:NSObject {
     }
     
     open func addPart(_ quantity:Double,date:Date?) {
+        HealthHelper.share.saveSample(quantity, date: date)
         var entry:Entry?
         if let date = date {
             entry = entryForDate(date: date)
