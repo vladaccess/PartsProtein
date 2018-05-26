@@ -133,7 +133,12 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
     }
     
     @IBAction func switchHealth(_ sender:UISwitch) {
-        
+        userDefaults.set(sender.isOn, forKey: Constants.Health.on.key())
+        userDefaults.synchronize()
+        tableView.reloadData()
+        if healthSwitch.isOn {
+            HealthHelper.share.askPermission()
+        }
     }
     
     
