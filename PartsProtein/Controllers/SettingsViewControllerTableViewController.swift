@@ -121,6 +121,13 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
         
     }
     
+    @IBAction func remindNotification(_ sender:UISwitch) {
+        userDefaults.set(sender.isOn, forKey: Constants.Notification.on.key())
+        userDefaults.synchronize()
+        tableView.reloadData()
+        updateNotificationPreferences()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateUI()

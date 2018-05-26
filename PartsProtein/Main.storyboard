@@ -451,6 +451,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D6g-g6-VAW">
                                                     <rect key="frame" x="318" y="8.0000000000000018" width="51" height="27.666666666666671"/>
+                                                    <connections>
+                                                        <action selector="remindNotification:" destination="iDn-7W-B8E" eventType="valueChanged" id="knk-5j-DWF"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
