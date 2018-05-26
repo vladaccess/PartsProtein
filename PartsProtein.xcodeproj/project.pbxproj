@@ -28,6 +28,7 @@
 		E988A43F209123BF007CB2C6 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A43E209123BF007CB2C6 /* Part.swift */; };
 		E988A44220913ABA007CB2C6 /* EatViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */; };
 		E9992F8720B9D9420065066C /* HealthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9992F8620B9D9420065066C /* HealthHelper.swift */; };
+		E9992F8A20B9D9730065066C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9992F8920B9D9730065066C /* HealthKit.framework */; };
 		E99BAE5D20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BAE5C20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift */; };
 		E99BE1AD208D1CCC009050C7 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */; };
 		E99E09CD208B3095003A74CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E09CC208B3095003A74CF /* Constants.swift */; };
@@ -63,6 +64,8 @@
 		E988A43E209123BF007CB2C6 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EatViewController+Animations.swift"; sourceTree = "<group>"; };
 		E9992F8620B9D9420065066C /* HealthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHelper.swift; sourceTree = "<group>"; };
+		E9992F8820B9D9730065066C /* PartsProtein.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PartsProtein.entitlements; sourceTree = "<group>"; };
+		E9992F8920B9D9730065066C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		E99BAE5C20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		E99E09CC208B3095003A74CF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82E0E2728CEDA5BFFDF9B541 /* Pods_PartsProtein.framework in Frameworks */,
+				E9992F8A20B9D9730065066C /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +93,7 @@
 		35E4C27D3D27A2222DBB0073 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9992F8920B9D9730065066C /* HealthKit.framework */,
 				FDFDE474377E6C468AE8CED6 /* Pods_PartsProtein.framework */,
 			);
 			name = Frameworks;
@@ -149,6 +154,7 @@
 		E973F35E208A890C00D5C414 /* PartsProtein */ = {
 			isa = PBXGroup;
 			children = (
+				E9992F8820B9D9730065066C /* PartsProtein.entitlements */,
 				E973F35F208A890C00D5C414 /* AppDelegate.swift */,
 				E988A440209123D4007CB2C6 /* Model */,
 				E973F373208A899F00D5C414 /* Support */,
@@ -249,6 +255,11 @@
 					E973F35B208A890C00D5C414 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -520,6 +531,7 @@
 			baseConfigurationReference = C73DEC36FE77FE0290DEECED /* Pods-PartsProtein.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PartsProtein/PartsProtein.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55776BLM7G;
 				INFOPLIST_FILE = PartsProtein/Info.plist;
@@ -536,6 +548,7 @@
 			baseConfigurationReference = BE3C2A3B4FD4492FCB3DE57A /* Pods-PartsProtein.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PartsProtein/PartsProtein.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55776BLM7G;
 				INFOPLIST_FILE = PartsProtein/Info.plist;
