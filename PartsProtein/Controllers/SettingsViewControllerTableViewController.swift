@@ -24,6 +24,10 @@ class SettingsViewControllerTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Preferences"
+        [smallPortionTF,bigPortionTF,goalTF].map {
+            textF in
+            textF?.inputAccessoryView = Global.numericToolBar(textF, selector: #selector(UIResponder.resignFirstResponder))
+        }
     }
 
 
