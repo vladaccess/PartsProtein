@@ -27,6 +27,7 @@
 		E988A43D2091219C007CB2C6 /* UINavigationController-StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */; };
 		E988A43F209123BF007CB2C6 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A43E209123BF007CB2C6 /* Part.swift */; };
 		E988A44220913ABA007CB2C6 /* EatViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */; };
+		E9992F8720B9D9420065066C /* HealthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9992F8620B9D9420065066C /* HealthHelper.swift */; };
 		E99BAE5D20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BAE5C20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift */; };
 		E99BE1AD208D1CCC009050C7 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */; };
 		E99E09CD208B3095003A74CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E09CC208B3095003A74CF /* Constants.swift */; };
@@ -61,6 +62,7 @@
 		E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController-StatusBar.swift"; sourceTree = "<group>"; };
 		E988A43E209123BF007CB2C6 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		E988A44120913ABA007CB2C6 /* EatViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EatViewController+Animations.swift"; sourceTree = "<group>"; };
+		E9992F8620B9D9420065066C /* HealthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHelper.swift; sourceTree = "<group>"; };
 		E99BAE5C20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		E99BE1AC208D1CCC009050C7 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		E99E09CC208B3095003A74CF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				E90F0F35208BB41000E6A738 /* Extensions.swift */,
 				E982C7EA208BC10700763AA1 /* Settings.swift */,
 				E9B1929C208BF07B00C2A5CC /* Global.swift */,
+				E9992F8620B9D9420065066C /* HealthHelper.swift */,
 				E940CBBE20B73F32000D6CA2 /* NotificationHelper.swift */,
 				E988A43C2091219C007CB2C6 /* UINavigationController-StatusBar.swift */,
 			);
@@ -379,6 +382,7 @@
 				E988A43F209123BF007CB2C6 /* Part.swift in Sources */,
 				E9B1929D208BF07B00C2A5CC /* Global.swift in Sources */,
 				E99BAE5D20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift in Sources */,
+				E9992F8720B9D9420065066C /* HealthHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
