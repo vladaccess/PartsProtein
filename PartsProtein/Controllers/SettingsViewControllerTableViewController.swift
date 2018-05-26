@@ -35,7 +35,7 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
         title = "Preferences"
         [smallPortionTF,bigPortionTF,goalTF].map {
             textF in
-            textF?.inputAccessoryView = Global.numericToolBar(textF, selector: #selector(UIResponder.resignFirstResponder))
+            textF?.inputAccessoryView = Global.numericToolBar(textF, selector: #selector(UIResponder.resignFirstResponder), barColor: Tint.mainTint, tintColor: .white)
         }
     }
     
