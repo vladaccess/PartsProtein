@@ -39,14 +39,14 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
         }
     }
     
-
-
+    
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 3
@@ -62,7 +62,7 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
         return 1
     }
     
-     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44.0
     }
     
@@ -82,7 +82,7 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
         guard let text = textField.text else { return }
         
         let numberText = numberFormatter.number(from: text) as? Double ?? 0.0
-    
+        
         userDefaults.set(numberText, forKey: key)
         userDefaults.synchronize()
         
@@ -100,7 +100,11 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
         
         notificationSwitch.isOn = userDefaults.bool(forKey: Constants.Notification.on.key())
         healthSwitch.isOn = userDefaults.bool(forKey: Constants.Health.on.key())
+        
+        fromLabel.text = "\(String(describing: userDefaults.integer(forKey: Constants.Notification.from.key()))):00"
+        toLabel.text = "\(String(describing: userDefaults.integer(forKey: Constants.Notification.to.key()))):00"
+        everyLabel.text = "\(String(describing: userDefaults.integer(forKey: Constants.Notification.interval.key()))) hours"
     }
-
-
+    
+    
 }
