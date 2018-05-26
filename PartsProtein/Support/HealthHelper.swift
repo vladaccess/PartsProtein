@@ -7,3 +7,26 @@
 //
 
 import Foundation
+import HealthKit
+
+class HealthHelper {
+    static let share = HealthHelper()
+    
+    private init() {}
+    
+    let store = HKHealthStore()
+    
+    
+    @available (iOS 9.0,*)
+    func askPermission() {
+        if HKHealthStore.isHealthDataAvailable() {
+            guard let type = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryProtein) else { return }
+            store.requestAuthorization(toShare: [type], read: nil, completion: { (success, error) in
+                if let error = error {
+                    print("Couldn't authorizate - \(error)")
+                }
+            })
+            
+        }
+    }
+}
