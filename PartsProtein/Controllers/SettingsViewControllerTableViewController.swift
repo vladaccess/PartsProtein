@@ -132,6 +132,10 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
         updateNotificationPreferences()
     }
     
+    @IBAction func switchHealth(_ sender:UISwitch) {
+        
+    }
+    
     
     func updateUI() {
         smallPortionTF.text = userDefaults.string(forKey: Constants.Part.small.key())
