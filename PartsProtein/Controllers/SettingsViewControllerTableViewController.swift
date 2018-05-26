@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AHKActionSheet
 
 class SettingsViewControllerTableViewController: UITableViewController,UITextFieldDelegate {
     
@@ -54,7 +55,7 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
             if userDefaults.bool(forKey: Constants.Notification.on.key()) {
                 return 4
             }else {
-                1
+                return 1
             }
         }else if section == 2 {
             return 1
@@ -64,6 +65,37 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44.0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var actionSheet:AHKActionSheet?
+        if (indexPath as NSIndexPath).section == 1 && (indexPath as NSIndexPath).row == 1 {
+            actionSheet = AHKActionSheet(title: "From:")
+            for unit in 5...22 {
+                actionSheet?.addButton(withTitle: "\(unit):00", type: .default, handler: { _ in
+                    self.updateNotificationSettings(for: Constants.Notification.from.key(), unit)
+                })
+            }
+        }
+        if (indexPath as NSIndexPath).section == 1 && (indexPath as NSIndexPath).row == 2 {
+            actionSheet = AHKActionSheet(title: "To:")
+            let upper = userDefaults.integer(forKey: Constants.Notification.from.key()) + 1
+            for unit in upper...24 {
+                actionSheet?.addButton(withTitle: "\(unit):00", type: .default, handler: { _ in
+                    self.updateNotificationSettings(for: Constants.Notification.to.key(), unit)
+                })
+            }
+        }
+        if (indexPath as NSIndexPath).section == 1 && (indexPath as NSIndexPath).row == 3 {
+            actionSheet = AHKActionSheet(title: "Interval:")
+            for unit in 1...8 {
+                let hour = (unit == 1) ? "hour" : "hours"
+                actionSheet?.addButton(withTitle: "\(unit) \(hour)", type: .default, handler: { _ in
+                    self.updateNotificationSettings(for: Constants.Notification.interval.key(), unit)
+                })
+            }
+        }
+        actionSheet?.show()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -106,5 +138,22 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
         everyLabel.text = "\(String(describing: userDefaults.integer(forKey: Constants.Notification.interval.key()))) hours"
     }
     
+    func updateNotificationPreferences() {
+        if notificationSwitch.isOn {
+            NotificationHelper.unschoeduleNotification()
+            NotificationHelper.registerNotification()
+        }else {
+            NotificationHelper.unschoeduleNotification()
+        }
+    }
     
+    
+    func updateNotificationSettings(for key:String,_ value:Int){
+        userDefaults.set(value, forKey: key)
+        userDefaults.synchronize()
+        updateUI()
+        updateNotificationPreferences()
+    }
 }
+
+
