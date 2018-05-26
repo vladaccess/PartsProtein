@@ -99,6 +99,7 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
         goalTF.text = userDefaults.string(forKey: Constants.Part.goal.key())
         
         notificationSwitch.isOn = userDefaults.bool(forKey: Constants.Notification.on.key())
+        healthSwitch.isOn = userDefaults.bool(forKey: Constants.Health.on.key())
     }
 
 
