@@ -51,4 +51,13 @@ public enum Constants {
             }
         }
     }
+    
+    public enum Health:Int {
+        case on
+        func key() -> String {
+            switch self {
+            case .on: return "HEALTH_ON"
+            }
+        }
+    }
 }
