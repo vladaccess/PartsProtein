@@ -97,6 +97,7 @@ final class EntryHandler:NSObject {
     }
     
     func removeLastPart() {
+        HealthHelper.share.removeLastPortion()
         let entry = currentEntry()
         if let lastPart = entry.parts.last {
             try! realm.write {

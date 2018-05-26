@@ -52,4 +52,32 @@ class HealthHelper {
         })
         
     }
+    
+    @available (iOS 9.0,*)
+    func removeLastPortion() {
+        if !userDefaults.bool(forKey: Constants.Health.on.key()) {
+            return
+        }
+        
+        if !HKHealthStore.isHealthDataAvailable() || store.authorizationStatus(for: HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryProtein)!) != HKAuthorizationStatus.sharingAuthorized {
+            return
+        }
+        guard let type = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryProtein) else { return }
+        let sortDiscriptor = NSSortDescriptor(key: HKPredicateKeyPathStartDate, ascending: false)
+        
+        let query = HKSampleQuery(sampleType: type, predicate: nil, limit: 1, sortDescriptors: [sortDiscriptor]) { (query, results, error) in
+            if let error = error {
+                print("Couldn't create query - \(error.localizedDescription)")
+            }
+            
+            guard let results = results as? [HKQuantitySample],let object = results.first else { return }
+            
+            self.store.delete(object, withCompletion: { (success, error) in
+                if let error = error {
+                    print("Couldn't delete object from Health")
+                }
+            })
+        }
+        store.execute(query)
+    }
 }
