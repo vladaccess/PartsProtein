@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setupAppearance()
+        Settings.registerDefaults()
         let userDefaults = UserDefaults.groupUserDefaults()
         if !userDefaults.bool(forKey: Constants.General.overboardingShown.key()) {
             overBoardingShow()

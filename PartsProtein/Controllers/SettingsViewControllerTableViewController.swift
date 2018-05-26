@@ -143,9 +143,9 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
     
     
     func updateUI() {
-        smallPortionTF.text = userDefaults.string(forKey: Constants.Part.small.key())
-        bigPortionTF.text = userDefaults.string(forKey: Constants.Part.big.key())
-        goalTF.text = userDefaults.string(forKey: Constants.Part.goal.key())
+        smallPortionTF.text = numberFormatter.string(for: userDefaults.double(forKey: Constants.Part.small.key()))
+        bigPortionTF.text = numberFormatter.string(for: userDefaults.double(forKey: Constants.Part.big.key()))
+        goalTF.text = numberFormatter.string(for: userDefaults.double(forKey: Constants.Part.goal.key()))
         
         notificationSwitch.isOn = userDefaults.bool(forKey: Constants.Notification.on.key())
         healthSwitch.isOn = userDefaults.bool(forKey: Constants.Health.on.key())
