@@ -95,6 +95,7 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
                 })
             }
         }
+        tableView.deselectRow(at: indexPath, animated: true)
         actionSheet?.show()
     }
     
