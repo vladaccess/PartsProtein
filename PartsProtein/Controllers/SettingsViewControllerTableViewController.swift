@@ -120,6 +120,10 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
         userDefaults.synchronize()
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateUI()
+    }
     
     @IBAction func remindNotification(_ sender:UISwitch) {
         userDefaults.set(sender.isOn, forKey: Constants.Notification.on.key())
@@ -128,10 +132,6 @@ class SettingsViewControllerTableViewController: UITableViewController,UITextFie
         updateNotificationPreferences()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        updateUI()
-    }
     
     func updateUI() {
         smallPortionTF.text = userDefaults.string(forKey: Constants.Part.small.key())
