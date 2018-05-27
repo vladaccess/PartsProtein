@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
         <array key="KaushanScript-Regular.ttf">
             <string>KaushanScript-Regular</string>
         </array>
@@ -157,7 +160,43 @@
                     <view key="view" contentMode="scaleToFill" id="6rU-aQ-Mth">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Way to Go" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYe-jL-Kop">
+                                <rect key="frame" x="16" y="54" width="343" height="70"/>
+                                <fontDescription key="fontDescription" name="KaushanScript-Regular" family="Kaushan Script" pointSize="48"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JH-ZO-r1b">
+                                <rect key="frame" x="16" y="144" width="343" height="65.666666666666686"/>
+                                <string key="text">Good job keeping healthy! 
+By the way, we’d love some feedback! How do you feel about PartsProtein? </string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ku-LR-zLl">
+                                <rect key="frame" x="137.66666666666666" y="244.66666666666663" width="100" height="100"/>
+                                <state key="normal" image="smile"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12A-DQ-WHc">
+                                <rect key="frame" x="137.66666666666666" y="374.66666666666669" width="100" height="100"/>
+                                <state key="normal" image="sad"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.75294117647058822" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Bz-9i-STX" firstAttribute="trailing" secondItem="hYe-jL-Kop" secondAttribute="trailing" constant="16" id="39q-Oa-JlC"/>
+                            <constraint firstItem="hYe-jL-Kop" firstAttribute="leading" secondItem="0Bz-9i-STX" secondAttribute="leading" constant="16" id="3ys-zc-hc4"/>
+                            <constraint firstItem="6JH-ZO-r1b" firstAttribute="top" secondItem="hYe-jL-Kop" secondAttribute="bottom" constant="20" id="AbU-AU-DoP"/>
+                            <constraint firstItem="0Bz-9i-STX" firstAttribute="trailing" secondItem="6JH-ZO-r1b" secondAttribute="trailing" constant="16" id="CAb-Lu-7gs"/>
+                            <constraint firstItem="hYe-jL-Kop" firstAttribute="top" secondItem="0Bz-9i-STX" secondAttribute="top" constant="10" id="f5d-Kz-24a"/>
+                            <constraint firstItem="12A-DQ-WHc" firstAttribute="centerX" secondItem="6rU-aQ-Mth" secondAttribute="centerX" id="fkS-oY-BFi"/>
+                            <constraint firstItem="5Ku-LR-zLl" firstAttribute="top" secondItem="6JH-ZO-r1b" secondAttribute="bottom" constant="35" id="k72-vU-lIY"/>
+                            <constraint firstItem="6JH-ZO-r1b" firstAttribute="leading" secondItem="0Bz-9i-STX" secondAttribute="leading" constant="16" id="kfQ-6N-cGj"/>
+                            <constraint firstItem="5Ku-LR-zLl" firstAttribute="centerX" secondItem="6rU-aQ-Mth" secondAttribute="centerX" id="oHe-bm-YIi"/>
+                            <constraint firstItem="12A-DQ-WHc" firstAttribute="top" secondItem="5Ku-LR-zLl" secondAttribute="bottom" constant="30" id="sVP-xT-EiL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0Bz-9i-STX"/>
                     </view>
                     <navigationItem key="navigationItem" id="FaA-su-y5p"/>
@@ -357,7 +396,7 @@
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NA4-pg-JCC">
-                                                    <rect key="frame" x="344.33333333333331" y="13.666666666666664" width="15.666666666666686" height="17"/>
+                                                    <rect key="frame" x="344.66666666666669" y="13.666666666666664" width="15.333333333333314" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -400,7 +439,7 @@
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smw-yk-Cdg">
-                                                    <rect key="frame" x="344.33333333333331" y="13.666666666666664" width="15.666666666666686" height="17"/>
+                                                    <rect key="frame" x="344.66666666666669" y="13.666666666666664" width="15.333333333333314" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -443,7 +482,7 @@
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPf-ET-s6e">
-                                                    <rect key="frame" x="344.33333333333331" y="14" width="15.666666666666686" height="17"/>
+                                                    <rect key="frame" x="344.66666666666669" y="14" width="15.333333333333314" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -717,10 +756,9 @@
         <!--Navigation Controller-->
         <scene sceneID="bPq-z6-T7n">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="enE-ls-elw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="enE-ls-elw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vl9-7A-YBd">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -740,8 +778,10 @@
         <image name="large-icon" width="40" height="40"/>
         <image name="minus-icon" width="24" height="24"/>
         <image name="plus-icon" width="40" height="40"/>
+        <image name="sad" width="100" height="100"/>
         <image name="settings-icon" width="30" height="30"/>
         <image name="small-icon" width="40" height="40"/>
+        <image name="smile" width="100" height="100"/>
         <image name="star" width="50" height="50"/>
         <image name="tiny-add" width="20" height="20"/>
     </resources>
