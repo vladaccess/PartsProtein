@@ -88,7 +88,7 @@ class EatViewController: UIViewController,UIViewControllerTransitioningDelegate{
         }
         
         if !userDefaults.bool(forKey: "FEEDBACK") {
-            if EntryHandler.shared.overAllQuantity() > 40 {
+            if EntryHandler.shared.overAllQuantity() > 170 {
                 animateStarButton()
             }
         }
@@ -100,8 +100,8 @@ class EatViewController: UIViewController,UIViewControllerTransitioningDelegate{
             if let destVC = segue.destination as? FeedbackViewController {
                 destVC.transitioningDelegate = self
                 destVC.modalPresentationStyle = .custom
-                //userDefaults.set(true, forKey: "FEEDBACK")
-                //userDefaults.synchronize()
+                userDefaults.set(true, forKey: "FEEDBACK")
+                userDefaults.synchronize()
             }
         }
     }

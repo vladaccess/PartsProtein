@@ -9,12 +9,13 @@
 import UIKit
 
 class FeedbackViewController: UIViewController {
-
+    @IBOutlet weak var negativeButton:UIButton?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        negativeButton?.layer.borderColor = UIColor.white.cgColor
+        negativeButton?.layer.borderWidth = 1.0
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -25,8 +26,15 @@ class FeedbackViewController: UIViewController {
     
     @IBAction func sureAction() {
         self.dismiss(animated: true) {
-//            UIApplication.shared.open(<#T##url: URL##URL#>, options: <#T##[String : Any]#>, completionHandler: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
+            //            UIApplication.shared.open(<#T##url: URL##URL#>, options: <#T##[String : Any]#>, completionHandler: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
         }
     }
-
+    
+    @IBAction func contactAction() {
+        self.dismiss(animated: true) {
+            guard let url = URL(string:"mailto:vladaccess@outlook.com") else { return }
+            UIApplication.shared.open(url)
+        }
+    }
+    
 }
