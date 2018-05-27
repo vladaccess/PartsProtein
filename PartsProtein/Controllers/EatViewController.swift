@@ -15,7 +15,7 @@ import Realm
 import BubbleTransition
 
 
-class EatViewController: UIViewController {
+class EatViewController: UIViewController,UIViewControllerTransitioningDelegate{
     
     @IBOutlet weak var smallButton:UIButton!
     @IBOutlet weak var largeButton:UIButton!
@@ -31,6 +31,7 @@ class EatViewController: UIViewController {
     var expanded = false
     var realmNotification:RLMNotificationToken?
     var manager = CMMotionManager()
+    let transition = BubbleTransition()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,6 +95,17 @@ class EatViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "feedback" {
+            if let destVC = segue.destination as? FeedbackViewController {
+                destVC.transitioningDelegate = self
+                destVC.modalPresentationStyle = .custom
+                //userDefaults.set(true, forKey: "FEEDBACK")
+                //userDefaults.synchronize()
+            }
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         Global.showPopTipOnceForKey("HEALTH", userDefaults: userDefaults, popTipText: "You can enable HealthCenter in Settings", inView: view, fromFrame: CGRect(x:view.frame.width - 60,y:view.frame.height,width:1,height:1), direction: .up, color:Tint.tint_destructive)
@@ -144,6 +156,22 @@ class EatViewController: UIViewController {
         Global.showPopTipOnceForKey("UNDO", userDefaults: userDefaults, popTipText: "Tap here to undo latest action", inView: view, fromFrame: minusButton.frame, direction: .down, color: Tint.mainTint)
         let portion = smallButton == sender ? Constants.Part.small.key() : Constants.Part.big.key()
         updateCurrentEntry(userDefaults.double(forKey: portion))
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.bubbleColor = UIColor(red: 245.0/255.0, green: 192.0/255.0, blue: 24.0/255.0, alpha: 1)
+        let center = CGPoint(x: starButton.center.x, y: starButton.center.y + 64.0)
+        transition.startingPoint = center
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.bubbleColor = UIColor(red: 245.0/255.0, green: 192.0/255.0, blue: 24.0/255.0, alpha: 1)
+        let center = CGPoint(x: starButton.center.x, y: starButton.center.y + 64.0)
+        transition.startingPoint = center
+        return transition
     }
     
 
