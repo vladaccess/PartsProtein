@@ -13,4 +13,5 @@ target 'PartsProtein' do
   pod 'RealmSwift'
   pod 'AMPopTip'
   pod 'CVCalendar'
+  pod 'BubbleTransition'
 end

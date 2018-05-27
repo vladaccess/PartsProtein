@@ -12,6 +12,7 @@ import UICountingLabel
 import BAFluidView
 import AMPopTip
 import Realm
+import BubbleTransition
 
 
 class EatViewController: UIViewController {
