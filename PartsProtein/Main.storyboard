@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Regular</string>
         </array>
@@ -178,6 +181,9 @@ By the way, we’d love some feedback! How do you feel about PartsProtein? </str
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ku-LR-zLl">
                                 <rect key="frame" x="137.66666666666666" y="244.66666666666663" width="100" height="100"/>
                                 <state key="normal" image="smile"/>
+                                <connections>
+                                    <segue destination="UuI-jc-3sm" kind="show" id="EFj-v5-WPH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12A-DQ-WHc">
                                 <rect key="frame" x="137.66666666666666" y="374.66666666666669" width="100" height="100"/>
@@ -204,6 +210,76 @@ By the way, we’d love some feedback! How do you feel about PartsProtein? </str
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feT-m3-2ml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2162" y="103"/>
+        </scene>
+        <!--Feedback View Controller-->
+        <scene sceneID="wmo-6f-8xA">
+            <objects>
+                <viewController id="UuI-jc-3sm" customClass="FeedbackViewController" customModule="PartsProtein" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eTs-Hv-VG9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t8-8v-MEJ">
+                                <rect key="frame" x="16" y="718" width="167.66666666666666" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RZp-jC-dtY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Nope">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="negativeAction" destination="UuI-jc-3sm" eventType="touchUpInside" id="pev-UG-HcI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxT-2J-5DN">
+                                <rect key="frame" x="191.66666666666663" y="718" width="167.33333333333337" height="40"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iLA-DF-Pmo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Sure!">
+                                    <color key="titleColor" red="0.96078431372549022" green="0.75294117647058822" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sureAction" destination="UuI-jc-3sm" eventType="touchUpInside" id="Ifk-PF-3kb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yay!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auM-tU-BgK">
+                                <rect key="frame" x="16" y="64" width="343" height="69.666666666666686"/>
+                                <fontDescription key="fontDescription" name="KaushanScript-Regular" family="Kaushan Script" pointSize="48"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How about rating PartsProtein on the AppStore? We always appreciate the feedback!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndb-gr-6mJ">
+                                <rect key="frame" x="16" y="183.66666666666666" width="343" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.75294117647058822" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lf8-jC-RnD" firstAttribute="trailing" secondItem="Ndb-gr-6mJ" secondAttribute="trailing" constant="16" id="AeW-xj-KbQ"/>
+                            <constraint firstItem="0t8-8v-MEJ" firstAttribute="leading" secondItem="lf8-jC-RnD" secondAttribute="leading" constant="16" id="D7P-ao-kGA"/>
+                            <constraint firstItem="qxT-2J-5DN" firstAttribute="leading" secondItem="0t8-8v-MEJ" secondAttribute="trailing" constant="8" id="L1P-CJ-iWH"/>
+                            <constraint firstItem="lf8-jC-RnD" firstAttribute="bottom" secondItem="0t8-8v-MEJ" secondAttribute="bottom" constant="20" id="NCr-fG-HIe"/>
+                            <constraint firstItem="auM-tU-BgK" firstAttribute="top" secondItem="lf8-jC-RnD" secondAttribute="top" constant="20" id="OFs-Ut-Ce9"/>
+                            <constraint firstItem="lf8-jC-RnD" firstAttribute="bottom" secondItem="qxT-2J-5DN" secondAttribute="bottom" constant="20" id="ao7-MS-qTM"/>
+                            <constraint firstItem="Ndb-gr-6mJ" firstAttribute="top" secondItem="auM-tU-BgK" secondAttribute="bottom" constant="50" id="e8b-hY-z4Y"/>
+                            <constraint firstItem="auM-tU-BgK" firstAttribute="leading" secondItem="lf8-jC-RnD" secondAttribute="leading" constant="16" id="eVt-v6-ZEF"/>
+                            <constraint firstItem="lf8-jC-RnD" firstAttribute="trailing" secondItem="qxT-2J-5DN" secondAttribute="trailing" constant="16" id="eZD-Gu-FfQ"/>
+                            <constraint firstItem="qxT-2J-5DN" firstAttribute="width" secondItem="0t8-8v-MEJ" secondAttribute="width" id="f5J-T0-fvq"/>
+                            <constraint firstItem="Ndb-gr-6mJ" firstAttribute="leading" secondItem="lf8-jC-RnD" secondAttribute="leading" constant="16" id="fsQ-8v-207"/>
+                            <constraint firstItem="lf8-jC-RnD" firstAttribute="trailing" secondItem="auM-tU-BgK" secondAttribute="trailing" constant="16" id="r5V-2N-n0q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lf8-jC-RnD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w82-3M-kXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3049" y="-143"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="0Qt-Jx-06A">
