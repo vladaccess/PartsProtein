@@ -71,7 +71,6 @@ class EatViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.view.layoutIfNeeded()
         
         //Set up programmatically that avoid issues
         if progressMeter == nil {
@@ -84,6 +83,12 @@ class EatViewController: UIViewController {
             progressMeter!.backgroundColor = .clear
             containerView.insertSubview(progressMeter!, belowSubview: maskImage)
             updateUI()
+        }
+        
+        if !userDefaults.bool(forKey: "FEEDBACK") {
+            if EntryHandler.shared.overAllQuantity() > 40 {
+                animateStarButton()
+            }
         }
         
     }

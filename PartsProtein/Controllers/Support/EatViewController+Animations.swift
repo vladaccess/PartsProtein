@@ -16,6 +16,30 @@ extension EatViewController {
         starButton.transform = CGAffineTransform(scaleX: 0.0001, y: 0.0001)
     }
     
+    func animateStarButton() {
+        let rotate = POPSpringAnimation(propertyNamed: kPOPLayerRotation)
+        rotate?.toValue = Double.pi * 2 - Double.pi/8
+        rotate?.springBounciness = 5
+        rotate?.removedOnCompletion = true
+        starButton.layer.pop_add(rotate, forKey: "ROTATE")
+        
+        let scale = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
+        scale?.toValue = NSValue(cgPoint: CGPoint(x: 0.8, y: 0.8))
+        scale?.springBounciness = 5
+        scale?.removedOnCompletion = true
+        starButton.pop_add(scale, forKey: "SCALE")
+        scale?.completionBlock = {
+            (_,_) in
+            let sway = POPBasicAnimation(propertyNamed: kPOPLayerRotation)
+            sway?.fromValue = -Double.pi/8
+            sway?.toValue = Double.pi
+            sway?.duration = 0.75
+            sway?.autoreverses = true
+            sway?.repeatForever = true
+            self.starButton.layer.pop_add(sway, forKey: "SWAY")
+        }
+    }
+    
     func contractAddButton() {
         addButton.isUserInteractionEnabled = false
         [smallButton,largeButton].forEach { $0?.isUserInteractionEnabled = false }
