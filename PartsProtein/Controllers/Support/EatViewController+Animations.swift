@@ -18,7 +18,7 @@ extension EatViewController {
     
     func animateStarButton() {
         let rotate = POPSpringAnimation(propertyNamed: kPOPLayerRotation)
-        rotate?.toValue = Double.pi * 2 - Double.pi/8
+        rotate?.toValue = 2 * Double.pi - Double.pi / 8
         rotate?.springBounciness = 5
         rotate?.removedOnCompletion = true
         starButton.layer.pop_add(rotate, forKey: "ROTATE")
@@ -32,7 +32,7 @@ extension EatViewController {
             (_,_) in
             let sway = POPBasicAnimation(propertyNamed: kPOPLayerRotation)
             sway?.fromValue = -Double.pi/8
-            sway?.toValue = Double.pi
+            sway?.toValue = Double.pi/8
             sway?.duration = 0.75
             sway?.autoreverses = true
             sway?.repeatForever = true
