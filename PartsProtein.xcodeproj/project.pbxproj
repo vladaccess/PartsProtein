@@ -36,6 +36,7 @@
 		E9B1929B208BCD7D00C2A5CC /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B1929A208BCD7D00C2A5CC /* WeightViewController.swift */; };
 		E9B1929D208BF07B00C2A5CC /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B1929C208BF07B00C2A5CC /* Global.swift */; };
 		E9C0EA922093CAFB004D7FB2 /* EntryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0EA912093CAFB004D7FB2 /* EntryHandler.swift */; };
+		E9DD057620BAC4CE008DD4F3 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DD057520BAC4CE008DD4F3 /* FeedbackViewController.swift */; };
 		E9EC7EDE208B674700B99254 /* KaushanScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9EC7EDD208B674700B99254 /* KaushanScript-Regular.ttf */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		E9B1929A208BCD7D00C2A5CC /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		E9B1929C208BF07B00C2A5CC /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		E9C0EA912093CAFB004D7FB2 /* EntryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryHandler.swift; sourceTree = "<group>"; };
+		E9DD057520BAC4CE008DD4F3 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		E9EC7EDD208B674700B99254 /* KaushanScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaushanScript-Regular.ttf"; sourceTree = "<group>"; };
 		FDFDE474377E6C468AE8CED6 /* Pods_PartsProtein.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartsProtein.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				E9113545208FE89C0015CCE3 /* EatViewController.swift */,
 				E9A0F67220A86726001520FB /* CalendarViewController.swift */,
 				E99BAE5C20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift */,
+				E9DD057520BAC4CE008DD4F3 /* FeedbackViewController.swift */,
 				E992AAB820B356C8000F3428 /* Support */,
 				E926C7D6208CBE04000F7808 /* Overboard */,
 			);
@@ -390,6 +393,7 @@
 				E9480F2C208B8366006752AF /* MeasureViewController.swift in Sources */,
 				E99BE1AD208D1CCC009050C7 /* GoalViewController.swift in Sources */,
 				E99E09CD208B3095003A74CF /* Constants.swift in Sources */,
+				E9DD057620BAC4CE008DD4F3 /* FeedbackViewController.swift in Sources */,
 				E988A43F209123BF007CB2C6 /* Part.swift in Sources */,
 				E9B1929D208BF07B00C2A5CC /* Global.swift in Sources */,
 				E99BAE5D20B8CA7D00049217 /* SettingsViewControllerTableViewController.swift in Sources */,
