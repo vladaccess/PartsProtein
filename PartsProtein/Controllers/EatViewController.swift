@@ -40,16 +40,7 @@ class EatViewController: UIViewController,UIViewControllerTransitioningDelegate{
         initAnimation()
         percentageLabel.animationDuration = 1.5
         percentageLabel.format = "%d%%"
-        
-        manager.accelerometerUpdateInterval = 0.01
-        manager.deviceMotionUpdateInterval = 0.01
-        manager.startDeviceMotionUpdates(to: OperationQueue.main) { (motion, error) in
-            if let motion = motion {
-                let rotation = atan2(motion.gravity.x, motion.gravity.y) - Double.pi
-                self.progressMeter?.transform = CGAffineTransform(rotationAngle: CGFloat(rotation))
-            }
-        }
-        
+        startDeviceMotion()
         
         realmNotification = EntryHandler.shared.realm.observe { (note, realm) in
             self.updateUI()
@@ -72,21 +63,8 @@ class EatViewController: UIViewController,UIViewControllerTransitioningDelegate{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
         //Set up programmatically that avoid issues
-        if progressMeter == nil {
-            let width = containerView.frame.size.width
-            progressMeter = BAFluidView(frame: CGRect(x: 0, y: 0, width: width, height: width), maxAmplitude: 40, minAmplitude: 8, amplitudeIncrement: 1)
-            progressMeter!.fillColor = Tint.mainTint
-            progressMeter!.fillAutoReverse = false
-            progressMeter!.fillDuration = 1.2
-            progressMeter!.fillRepeatCount = 0
-            progressMeter!.backgroundColor = .clear
-            containerView.insertSubview(progressMeter!, belowSubview: maskImage)
-            updateUI()
-        }
-        
+        setupProgressMeter()
         if !userDefaults.bool(forKey: "FEEDBACK") {
             if EntryHandler.shared.overAllQuantity() > 170 {
                 animateStarButton()
@@ -175,4 +153,36 @@ class EatViewController: UIViewController,UIViewControllerTransitioningDelegate{
     }
     
 
+}
+
+private extension EatViewController {
+    
+    func configureCoreMotion() {
+        manager.accelerometerUpdateInterval = 0.01
+        manager.deviceMotionUpdateInterval = 0.01
+    }
+    
+    func startDeviceMotion() {
+        configureCoreMotion()
+        manager.startDeviceMotionUpdates(to: OperationQueue.main) { (motion, error) in
+            if let motion = motion {
+                let rotation = atan2(motion.gravity.x, motion.gravity.y) - Double.pi
+                self.progressMeter?.transform = CGAffineTransform(rotationAngle: CGFloat(rotation))
+            }
+        }
+    }
+    
+    func setupProgressMeter() {
+        if progressMeter == nil {
+            let width = containerView.frame.size.width
+            progressMeter = BAFluidView(frame: CGRect(x: 0, y: 0, width: width, height: width), maxAmplitude: 40, minAmplitude: 8, amplitudeIncrement: 1)
+            progressMeter!.fillColor = Tint.mainTint
+            progressMeter!.fillAutoReverse = false
+            progressMeter!.fillDuration = 1.2
+            progressMeter!.fillRepeatCount = 0
+            progressMeter!.backgroundColor = .clear
+            containerView.insertSubview(progressMeter!, belowSubview: maskImage)
+            updateUI()
+        }
+    }
 }
