@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             loadMainStoryboard()
         }
         
+        
+        
         return true
     }
     
